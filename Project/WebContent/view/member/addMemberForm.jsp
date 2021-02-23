@@ -1,11 +1,10 @@
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page
 		language="java"
 		contentType="text/html; charset=utf-8"
 		pageEncoding="utf-8"
-   	isELIgnored="false"
-%>
-<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>    
+		isELIgnored="false" %>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
@@ -16,7 +15,7 @@
   <title>회원 가입</title>
 </head>
 <body>
-	<form action="${contextPath}/member/addMember.do">
+  <form action="${contextPath}/member/addMember.do">
 		<h1>회원 가입</h1>
 		<table>
 			<tr>

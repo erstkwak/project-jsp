@@ -31,15 +31,12 @@ public class MemberController extends HttpServlet {
 	}
 	
 	private void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// request.setCharacterEncoding("utf-8");
-		// response.setContentType("text/html); charset=utf-8");
-		
 		String forward = null;
-		
-		String action = request.getPathInfo();
+		String action  = request.getPathInfo();
+
 		System.out.println("[액션] " + action);
 		
-		// listMembers.do
+// listMembers.do
 		if (action == null || action.equals("/listMembers.do")) {
 			List<MemberVO> membersList = memberDAO.listMembers();
 			
@@ -48,60 +45,63 @@ public class MemberController extends HttpServlet {
 			forward = "/view/member/listMembers.jsp";
 		}
 		
-		
-		// addMember.do
+// addMember.do
 		else if (action.equals("/addMember.do")) {
 			String id       = request.getParameter("id"      );
 			String pwd      = request.getParameter("pwd"     );
 			String nickname = request.getParameter("nickname");
 			String email    = request.getParameter("email"   );
-			
 			MemberVO memberVO = new MemberVO(id, pwd, nickname, email);
-			memberDAO.addMember(memberVO);
 			
-			request.setAttribute("msg", "addMember");
+			memberDAO.addMember(memberVO);
 			
 			forward = "/member/listMembers.do";
 		}
 		
+// addMemberForm.do		
 		else if (action.equals("/addMemberForm.do")) {
 			forward = "/view/member/addMemberForm.jsp";
 		}
 		
+// modMember.do		
 		else if (action.equals("/modMember.do")) {
-		     String id       = request.getParameter("id");
-		     String pwd      = request.getParameter("pwd");
+		     String id       = request.getParameter("id"      );
+		     String pwd      = request.getParameter("pwd"     );
 		     String nickname = request.getParameter("nickname");
-	         String email    = request.getParameter("email");
-	         
+	         String email    = request.getParameter("email"   );
 		     MemberVO memberVO = new MemberVO(id, pwd, nickname, email);
 		     
 		     memberDAO.modMember(memberVO);
 		     
-		     request.setAttribute("msg", "modMember");
-		     
 		     forward ="/member/listMembers.do";
 		}
 		
+// modMemberForm.do
 		else if (action.equals("/modMemberForm.do")) {
 			String id = request.getParameter("id");
 			
 			MemberVO memInfo = memberDAO.findMember(id);
+			
 			request.setAttribute("memInfo", memInfo);
 			
 			forward = "/view/member/modMemberForm.jsp";
 		}
 		
+// delMember.do		
 		else if (action.equals("/delMember.do")) {
 		     String id = request.getParameter("id");
+		     
 		     memberDAO.delMember(id);
-		     request.setAttribute("msg", "delMember");
+		     
 		     forward = "/member/listMembers.do";
 		}
-		
+
+// 나머지		
 		else {
 			List<MemberVO> membersList = memberDAO.listMembers();
+			
 			request.setAttribute("membersList", membersList);
+			
 			forward = "/view/member/listMembers.jsp";
 		}
 		
