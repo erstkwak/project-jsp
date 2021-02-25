@@ -60,29 +60,21 @@
 		}
 		
 		// 답글창 open
-		function openReplyForm(guestbook_no)
+		function openReplyForm(gb_no)
 		{
-			// window.name = "부모창 이름"; 
-			window.name = "replyForm";
-			// window.open("open할 window", "자식창 이름", "팝업창 옵션");
-			window.open("GuestbookReplyFormAction.ge?num="+guestbook_no+"&page=${spage}",
-					"rForm", "width=570, height=350, resizable = no, scrollbars = no");
+
 		}
 		
 		// 삭제창 open
-		function openDelForm(guestbook_no)
+		function openDelForm(gb_no)
 		{
-			window.name = "parentForm";
-			window.open("GuestbookDeleteFormAction.ge?num="+guestbook_no,
-					"delForm", "width=570, height=350, resizable = no, scrollbars = no");
+
 		}
 		
 		// 수정창 open
-		function openUpdateForm(guestbook_no)
+		function openUpdateForm(gb_no)
 		{
-			window.name = "parentForm";
-			window.open("GuestbookUpdateFormAction.ge?num="+guestbook_no+"&page=${spage}",
-					"updForm", "width=570, height=350, resizable = no, scrollbars = no");
+
 		}
 
 	</script>
@@ -131,33 +123,16 @@
 					<hr size="1" width="700">		
 					<label>${guestbook.gb_id}</label>&nbsp;&nbsp;&nbsp;
 					<label>${guestbook.gb_date}&nbsp;&nbsp;&nbsp;&nbsp;</label>
-					<a href="#" onclick="openReplyForm(${guestbook.gb_no})">[답변]</a>&nbsp;
-					<a href="#" onclick="openUpdateForm(${guestbook.gb_no})">[수정]</a>&nbsp;
-					<a href="#" onclick="openDelForm(${guestbook.gb_no})">[삭제]</a><br>
+					<a href="#" >[답변]</a>&nbsp;
+					<a href="#" >[수정]</a>&nbsp;
+					<a href="#" >[삭제]</a><br>
 				 	${fn:replace(guestbook.gb_con, cn, br)} <br>
 				 </c:forEach>	
 			 		<hr size="1" width="700">
 			</div>
 			 	
 			<!-- 페이지 부분 -->
-		 	<div id="pageForm">
-				<c:if test="${startPage != 1}">
-					<a href='GuestbookListAction.ge?page=${startPage-1}'>[ 이전 ]</a>
-				</c:if>
-				
-				<c:forEach var="pageNum" begin="${startPage}" end="${endPage}">
-					<c:if test="${pageNum == spage}">
-						${pageNum}&nbsp;
-					</c:if>
-					<c:if test="${pageNum != spage}">
-						<a href='GuestbookListAction.ge?page=${pageNum}'>${pageNum}&nbsp;</a>
-					</c:if>
-				</c:forEach>
-				
-				<c:if test="${endPage != maxPage }">
-					<a href='GuestbookListAction.ge?page=${endPage+1 }'>[다음]</a>
-				</c:if>
-			</div> 
+
 		</form>
  	</div>
  	<!-- 글 목록 부분 끝 -->

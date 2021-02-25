@@ -25,7 +25,7 @@ public class GBController extends HttpServlet {
 
 	private void requestFunc(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		
+		System.out.println("where");
 		String command = request.getParameter("cmd");
 		
 		ActionFactory fac = new ActionFactory();
