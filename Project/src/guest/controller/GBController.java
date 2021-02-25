@@ -11,7 +11,7 @@ import guest.base.Action;
 import guest.base.ActionFactory;
 
 
-@WebServlet("/gbook")
+@WebServlet("/gbook/*")
 public class GBController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
