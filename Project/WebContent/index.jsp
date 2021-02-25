@@ -17,5 +17,6 @@
 </head>
 <body>
   <h1>프로젝트 시작</h1>
+    <a href="/gbook?cmd=GUESTBOOKLIST">방명록</a>
 </body>
 </html>
