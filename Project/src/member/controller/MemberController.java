@@ -1,6 +1,7 @@
 package member.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import member.dao.MemberDAO;
 import member.vo.MemberVO;
@@ -55,7 +57,7 @@ public class MemberController extends HttpServlet {
 			
 			memberDAO.addMember(memberVO);
 			
-			forward = "/member/listMembers.do";
+			forward = "/member/loginMember.do";
 		}
 		
 // addMemberForm.do		
@@ -95,14 +97,55 @@ public class MemberController extends HttpServlet {
 		     
 		     forward = "/member/listMembers.do";
 		}
+		
+// loginMember.do
+		else if (action.equals("/loginMember.do")) {
+			String id  = request.getParameter("id");
+			String pwd = request.getParameter("pwd");
+			
+			MemberVO memberVO = new MemberVO();
+			memberVO.setId (id);
+			memberVO.setPwd(pwd);
+			
+			memberDAO = new MemberDAO();
+			
+			boolean result = memberDAO.isExisted(memberVO);
+			
+			if (result) {
+				HttpSession session = request.getSession();
+				session.setAttribute("isLogon", true);
+				session.setAttribute("login_id", id);
+				session.setAttribute("login_pwd", pwd);
+				
+				forward = "/index.jsp";
+			}
+			else {
+				forward = "/view/member/loginMemberForm.jsp";
+			}
+		}
+		
+// loginMemberForm.do
+		else if (action.equals("/loginMemberForm.do")) {
+			forward = "/view/member/loginMemberForm.jsp";
+		}
 
-// 나머지		
+// logoutMember.do
+		else if (action.equals("/logoutMember.do")) {
+			HttpSession session = request.getSession();
+			session.invalidate();
+			
+			forward = "/index.jsp";
+		}
+		
+// adminPage.do
+		else if (action.equals("/adminPage.do")) {
+			forward = "/view/member/adminPage.jsp";
+		}
+
+// 나머지 요청	
 		else {
-			List<MemberVO> membersList = memberDAO.listMembers();
 			
-			request.setAttribute("membersList", membersList);
-			
-			forward = "/view/member/listMembers.jsp";
+			forward = "/index.jsp";
 		}
 		
 		request.getRequestDispatcher(forward).forward(request, response);

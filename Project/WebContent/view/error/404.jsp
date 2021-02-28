@@ -7,7 +7,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>404 오류</title>
+  <title>404 에러 발생</title>
 </head>
 <body>
   요청하신 페이지를 찾을 수 없습니다.<br>

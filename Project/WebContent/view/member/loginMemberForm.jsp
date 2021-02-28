@@ -12,11 +12,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>회원 가입</title>
+  <title>로그인</title>
 </head>
 <body>
-  <form action="${contextPath}/member/addMember.do" method="POST">
-		<h1>회원 가입</h1>
+  <form action="${contextPath}/member/loginMember.do" method="POST">
+		<h1>로그인</h1>
 		<table>
 			<tr>
 				<td>아이디</td>
@@ -27,16 +27,7 @@
 				<td><input type="password" name="pwd"></td>
 			</tr>
 			<tr>
-				<td>닉네임</td>
-				<td><input type="text" name="nickname"></td>
-			</tr>
-			<tr>
-				<td>이메일</td>
-				<td><input type="text" name="email"></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="가입하기"></td>
-				<td><input type="reset" value="다시입력"></td>
+				<td><input type="submit" value="로그인"></td>
 			</tr>
 		</table>
 	</form>

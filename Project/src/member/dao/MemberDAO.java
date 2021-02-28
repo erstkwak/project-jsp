@@ -176,5 +176,36 @@ public class MemberDAO {
 			conn .close();
 		} catch (SQLException e) {e.printStackTrace();}
 	}
+
+// 회원 로그인
+	public boolean isExisted(MemberVO memberVO) {
+		boolean result = false;
+		
+		String id  = memberVO.getId ();
+		String pwd = memberVO.getPwd();
+		
+		try {
+			conn = dataFactory.getConnection();
+		
+			query = "SELECT DECODE(COUNT(*), 1, 'true', 'false') AS result"
+			      + "  FROM member"
+			      + " WHERE id  = ?"
+			      + "   AND pwd = ?";
+			System.out.println("isExisted() => " + query);
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+			rs = pstmt.executeQuery();
+			
+			rs.next();
+			result = Boolean.parseBoolean(rs.getString("result"));
+			System.out.println(result);
+		
+		} 
+		catch (SQLException e) {e.printStackTrace();}
+		
+		return result;
+	}
 	
 }
