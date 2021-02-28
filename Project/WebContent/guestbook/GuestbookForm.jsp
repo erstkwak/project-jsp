@@ -59,23 +59,6 @@
 			}
 		}
 		
-		// 답글창 open
-		function openReplyForm(gb_no)
-		{
-
-		}
-		
-		// 삭제창 open
-		function openDelForm(gb_no)
-		{
-
-		}
-		
-		// 수정창 open
-		function openUpdateForm(gb_no)
-		{
-
-		}
 
 	</script>
 		
@@ -123,9 +106,8 @@
 					<hr size="1" width="700">		
 					<label>${guestbook.gb_id}</label>&nbsp;&nbsp;&nbsp;
 					<label>${guestbook.gb_date}&nbsp;&nbsp;&nbsp;&nbsp;</label>
-					<a href="#" >[답변]</a>&nbsp;
-					<a href="#" >[수정]</a>&nbsp;
-					<a href="#" >[삭제]</a><br>
+					<a href="/gbook?cmd=GUESTBOOKUPDATEFORM&gb_no=${guestbook.gb_no}">[수정]</a>&nbsp;
+					<a href="/gbook?cmd=GUESTBOOKDELETEFORM&gb_no=${guestbook.gb_no}">[삭제]</a><br>
 				 	${fn:replace(guestbook.gb_con, cn, br)} <br>
 				 </c:forEach>	
 			 		<hr size="1" width="700">

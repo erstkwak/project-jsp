@@ -51,6 +51,7 @@ public class GuestbookDao {
 		
 	}
 
+	// list조회
 	public List<GuestbookVo> getGuestbookList() {
 		List<GuestbookVo> gbList = new ArrayList<GuestbookVo>();
 		
@@ -98,5 +99,78 @@ public class GuestbookDao {
 	}
 	
 	return gbList;
+	}
+
+	//방명록삭제
+	public void guestbookDelete(GuestbookVo guestbookVo) {
+		Connection        conn  = null;
+		CallableStatement cstmt = null;
+
+		int    gb_no   = guestbookVo.getGb_no();
+		String gb_pass = guestbookVo.getGb_pass();
+
+
+		DBCon db = null;
+		try {
+			db = new DBCon();
+			conn = db.getConnection();
+			String sql = "{CALL PKG_GUESTBOOK.PROC_GB_DELETE(?, ?) }";
+			cstmt = conn.prepareCall(sql);
+			System.out.println(gb_no);
+			System.out.println(gb_pass);
+
+			
+			cstmt.setInt(1, gb_no);
+			cstmt.setString(2, gb_pass);		
+			cstmt.executeUpdate();
+
+			
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		} finally {
+			try {
+				if(cstmt != null) cstmt.close();
+				if(conn  != null) conn.close();
+			} catch (SQLException e) {				
+				e.printStackTrace();
+			}
+		}
+	}
+
+	//글 수정
+	public void guestbookUpdate(GuestbookVo guestbookVo) {
+		Connection        conn  = null;
+		CallableStatement cstmt = null;
+
+		int    gb_no   = guestbookVo.getGb_no();
+		String gb_pass = guestbookVo.getGb_pass();
+		String gb_con = guestbookVo.getGb_con();
+
+		DBCon db = null;
+		try {
+			db = new DBCon();
+			conn = db.getConnection();
+			String sql = "{CALL PKG_GUESTBOOK.PROC_GB_UPDATE(?, ?, ?) }";
+			cstmt = conn.prepareCall(sql);
+			System.out.println(gb_no);
+			System.out.println(gb_con);
+			
+			cstmt.setString(1, gb_con);
+			cstmt.setInt(2, gb_no);
+			cstmt.setString(3, gb_pass);		
+			cstmt.executeUpdate();
+
+			
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		} finally {
+			try {
+				if(cstmt != null) cstmt.close();
+				if(conn  != null) conn.close();
+			} catch (SQLException e) {				
+				e.printStackTrace();
+			}
+		
+		}
 	}
 }
