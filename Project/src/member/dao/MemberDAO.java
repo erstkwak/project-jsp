@@ -27,7 +27,7 @@ public class MemberDAO {
 			Context ctx = new InitialContext();
 			Context envContext = (Context) ctx.lookup("java:/comp/env");
 			dataFactory = (DataSource) envContext.lookup("jdbc/oracle");
-			System.out.println("[연결] 데이트베이스와 연결됨");
+			System.out.println("[연결] 데이터베이스와 연결됨");
 		} 
 		catch (NamingException e) {e.printStackTrace();}
 	}
