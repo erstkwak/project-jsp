@@ -7,7 +7,7 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   
-  <!-- 오류 처리 페이지 -->
+  <!-- 에러 처리 페이지 -->
   <error-page>
     <error-code>404</error-code>
     <location>/view/error/404.jsp</location>
