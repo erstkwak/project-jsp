@@ -200,7 +200,11 @@ public class MemberDAO {
 			
 			rs.next();
 			result = Boolean.parseBoolean(rs.getString("result"));
-			System.out.println(result);
+
+			if (result)
+				System.out.println("[체크] 가입된 회원 정보와 일치");
+			else 
+				System.out.println("[체크] 가입된 회원 정보와 불일치");
 		
 		} 
 		catch (SQLException e) {e.printStackTrace();}
