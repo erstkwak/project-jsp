@@ -41,6 +41,6 @@
 			</c:when>
 		</c:choose>
 	</table>
-	<a href="${contextPath}/member/adminPage.do">관리자 페이지로</a>
+	<a href="${contextPath}/member/adminInfo.do">관리자 페이지로</a>
 </body>
 </html>
