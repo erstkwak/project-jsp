@@ -32,7 +32,7 @@ public class MemberController extends HttpServlet {
 		String forward = null;
 		String action  = request.getPathInfo();
 
-		if (!action.substring(1, 7).equals("assets")) {
+		if (!action.substring(1, 4).equals("ass")) {
 			System.out.println("[액션] " + action);
 		}
 
@@ -48,7 +48,7 @@ public class MemberController extends HttpServlet {
 		*/
 		
 // addMember.do
-		else if (action.equals("/addMember.do")) {
+		if (action.equals("/addMember.do")) {
 			String id       = request.getParameter("id"      );
 			String pwd      = request.getParameter("pwd"     );
 			String nickname = request.getParameter("nickname");
