@@ -10,8 +10,6 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
-<a href="/gbook?cmd=GUESTBOOKLIST">방명록</a>
-
 <!-- 본문 내용 추후 작업 -->
 
 <!-- ======= Hero Section ======= -->

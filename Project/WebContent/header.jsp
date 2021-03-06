@@ -75,32 +75,20 @@
 			<!-- GNB // -->
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-        	<li><a href="${contextPath}/view/menu/menu1.jsp">메뉴1</a></li>
-        	<li><a href="${contextPath}/view/menu/menu2.jsp">메뉴2</a></li>
-          <li class="drop-down"><a href="${contextPath}/view/menu/menu3.jsp">메뉴3</a>
+        	<li><a href="${contextPath}/view/menu/menu1.jsp">프로젝트</a></li>
+        	<li><a href="${contextPath}/view/menu/menu2.jsp">소개</a></li>
+          <li class="drop-down"><a href="${contextPath}/view/menu/menu3.jsp">운동</a>
           	<ul>
-          		<li><a href="${contextPath}/view/menu/menu3_1.jsp">서브메뉴1</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_2.jsp">서브메뉴2</a></li>
+          		<li><a href="${contextPath}/view/menu/menu3_1.jsp">어깨 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/menu3_2.jsp">가슴 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/menu3_3.jsp">등 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/menu3_4.jsp">이두·삼두 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/menu3_5.jsp">하체 운동</a></li>
           	</ul>
           </li>
-          <li class="drop-down"><a href="${contextPath}/view/menu/menu4.jsp">메뉴4</a>
-          	<ul>
-          		<li><a href="${contextPath}/view/menu/menu4_1.jsp">서브메뉴1</a></li>
-          		<li><a href="${contextPath}/view/menu/menu4_2.jsp">서브메뉴2</a></li>
-          	</ul>
-          </li>
-          <li class="drop-down"><a href="${contextPath}/view/menu/menu5.jsp">메뉴5</a>
-          	<ul>
-          		<li><a href="${contextPath}/view/menu/menu5_1.jsp">서브메뉴1</a></li>
-          		<li><a href="${contextPath}/view/menu/menu5_2.jsp">서브메뉴2</a></li>
-          	</ul>
-          </li>
-          <li class="drop-down"><a href="${contextPath}/view/menu/menu6.jsp">메뉴6</a>
-          	<ul>
-          		<li><a href="${contextPath}/view/menu/menu6_1.jsp">서브메뉴1</a></li>
-          		<li><a href="${contextPath}/view/menu/menu6_2.jsp">서브메뉴2</a></li>
-          	</ul>
-          </li>
+        	<li><a href="${contextPath}/view/menu/menu4.jsp">게시판</a></li>
+        	<li><a href="${contextPath}/map?cmd=VIEW&idx=1&sc=">주변 헬스장 찾기</a></li>
+        	<li><a href="/gbook?cmd=GUESTBOOKLIST">방명록</a></li>
         </ul>
       </nav>
       <!-- // GNB -->

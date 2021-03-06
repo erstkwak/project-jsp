@@ -14,10 +14,10 @@
 <section id="breadcrumbs" class="breadcrumbs">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
-      <h2>메뉴3</h2>
+      <h2>운동</h2>
       <ol>
         <li><a href="${contextPath}/">홈</a></li>
-        <li>메뉴3</li>
+        <li>운동</li>
       </ol>
     </div>
   </div>
