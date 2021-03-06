@@ -14,11 +14,10 @@
 <section id="breadcrumbs" class="breadcrumbs">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
-      <h2>하체 운동</h2>
+      <h2>공지사항</h2>
       <ol>
         <li><a href="${contextPath}/">홈</a></li>
-        <li><a href="${contextPath}/menu3.jsp">운동</a></li>
-        <li>하체 운동</li>
+        <li>공지사항</li>
       </ol>
     </div>
   </div>
@@ -26,7 +25,32 @@
 <!-- // 페이지 소개 -->
 
 <div style="text-align: center">
-	<img width = "200px" height = "200px" src="/images/5.jpg"	/>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
+	본문 테스트<br>
 </div>
 
 <jsp:include page="/footer.jsp"></jsp:include>
