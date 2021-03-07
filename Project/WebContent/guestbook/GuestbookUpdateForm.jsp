@@ -48,7 +48,6 @@ function checkValue()
 
   </table>
   </form>
-
-
+  
 </body>
 </html>

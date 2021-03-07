@@ -26,7 +26,7 @@
 <!-- // 페이지 소개 -->
 
 <div style="text-align: center">
-	<img width = "200px" height = "200px" src="/view/img/3.jpg"	/>
+	<img width = "200px" height = "200px" src="/images/3.jpg"	/>
 </div>
 
 <jsp:include page="/footer.jsp"></jsp:include>

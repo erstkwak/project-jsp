@@ -181,7 +181,7 @@ public class MemberController extends HttpServlet {
 		}
 		
 		if (forward.equals("/"))
-			response.sendRedirect(getServletContext().getContextPath());
+			response.sendRedirect("/");
 		else
 			request.getRequestDispatcher(forward).forward(request, response);
 	}

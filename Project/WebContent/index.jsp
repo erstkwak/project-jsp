@@ -10,66 +10,57 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
-<!-- 본문 내용 추후 작업 -->
-
-<!-- ======= Hero Section ======= -->
+<!-- 이미지 슬라이더 // -->
 <section id="hero">
   <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
     <div class="carousel-inner" role="listbox">
-
       <!-- Slide 1 -->
-      <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+      <div class="carousel-item active" style="background-image: url(images/index_slide1.jpg);">
         <div class="carousel-container">
           <div class="carousel-content animate__animated animate__fadeInUp">
-            <h2>Welcome to <span>Flattern</span></h2>
-            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+            <h2>건강 · 노화 예방 · 다이어트 · 벌크업 · 근육질 몸매 · 프로필 촬영 ...</h2>
+            <p>계획은 세웠지만 처음이라 뭘 해야 할지 몰라 막막한 헬스 입문자인 헬린이들에게 체계적이고 이해하기 쉽게 운동 관련 지식과 팁을 제공합니다.</p>
+            <div class="text-center"><a href="${contextPath}/view/menu/menu3.jsp" class="btn-get-started">운동 알아보기</a></div>
           </div>
         </div>
       </div>
-
       <!-- Slide 2 -->
-      <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
+      <div class="carousel-item" style="background-image: url(images/index_slide2.jpg);">
         <div class="carousel-container">
           <div class="carousel-content animate__animated animate__fadeInUp">
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+            <h2>주변 헬스장 중에 어디가 좋을까 ?</h2>
+            <p>내 위치로부터 주변 헬스장 목록을 검색해 관련 정보를 제공합니다. </p>
+            <div class="text-center"><a href="${contextPath}/map?cmd=VIEW&idx=1&sc=" class="btn-get-started">주변 헬스장 검색</a></div>
           </div>
         </div>
       </div>
-
       <!-- Slide 3 -->
-      <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
+      <div class="carousel-item" style="background-image: url(images/index_slide3.jpg);">
         <div class="carousel-container">
           <div class="carousel-content animate__animated animate__fadeInUp">
-            <h2>Sequi ea ut et est quaerat</h2>
-            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-            <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+            <h2>혼자라고 좌절하지 마세요 !</h2>
+            <p>헬스 관련 정보 및 팁 공유와 의견을 나눌 수 있는 게시판으로 가보세요.</p>
+            <div class="text-center"><a href="" class="btn-get-started">게시판으로 이동</a></div>
           </div>
         </div>
       </div>
-
     </div>
-
     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-
     <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-
     <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
   </div>
-</section><!-- End Hero -->
+</section>
+<!-- // 이미지 슬라이더 -->
 
 <main id="main">
 
+<!-- 
   <!-- ======= Cta Section ======= -->
   <section id="cta" class="cta">
     <div class="container">
