@@ -10,7 +10,6 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
-
 <!-- 이미지 슬라이더 // -->
 <section id="hero">
   <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -39,8 +38,8 @@
       <div class="carousel-item" style="background-image: url(images/index_slide3.jpg);">
         <div class="carousel-container">
           <div class="carousel-content animate__animated animate__fadeInUp">
-            <h2>혼자라고 포기하지 마세요 !</h2>
-            <p>헬스 관련 정보 및 팁 공유와 의견을 나눌 수 있는 곳으로 가보세요.</p>
+            <h2>혼자라고 좌절하지 마세요 !</h2>
+            <p>헬스 관련 정보 및 팁 공유와 의견을 나눌 수 있는 게시판으로 가보세요.</p>
             <div class="text-center"><a href="" class="btn-get-started">게시판으로 이동</a></div>
           </div>
         </div>

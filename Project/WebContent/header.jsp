@@ -60,7 +60,7 @@
         		<a href="${contextPath}/member/adminInfo.do">관리자</a>
         	</c:when>
         </c:choose>
-        <a href="${contextPath}/view/notice/notice.jsp">공지사항</a>
+        <a href="#">공지사항</a>
         <a href="#">고객센터</a>
       </div>
     </div>
@@ -87,8 +87,8 @@
           	</ul>
           </li>
         	<li><a href="${contextPath}/map?cmd=VIEW&idx=1&sc=">주변 헬스장 찾기</a></li>
-        	<li><a href="${contextPath}/view/menu/menu4.jsp">게시판</a></li>
-        	<li><a href="/gbook?cmd=GUESTBOOKLIST">방명록</a></li>
+        	<li><a href="${contextPath}/mboard/BoardListAction.do">게시판</a></li>
+        	<li><a href="${contextPath}/gbook?cmd=GUESTBOOKLIST">방명록</a></li>
         </ul>
       </nav>
       <!-- // GNB -->
