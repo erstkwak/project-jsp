@@ -25,6 +25,11 @@ public class MemberVO {
 		this.joindate = joindate;
 	}
 	
+<<<<<<< HEAD
+=======
+	public MemberVO() {}
+
+>>>>>>> 75aa3e26e6b4df41006331032484b343abe009d7
 	public String getId      () {return id      ;}
 	public String getPwd     () {return pwd     ;}
 	public String getNickname() {return nickname;}

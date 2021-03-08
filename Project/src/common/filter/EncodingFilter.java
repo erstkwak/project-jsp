@@ -8,7 +8,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
+<<<<<<< HEAD
 @WebFilter("/*")
+=======
+@WebFilter("/member/*")
+>>>>>>> 75aa3e26e6b4df41006331032484b343abe009d7
 public class EncodingFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {

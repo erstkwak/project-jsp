@@ -27,7 +27,11 @@ public class MemberDAO {
 			Context ctx = new InitialContext();
 			Context envContext = (Context) ctx.lookup("java:/comp/env");
 			dataFactory = (DataSource) envContext.lookup("jdbc/oracle");
+<<<<<<< HEAD
 			System.out.println("[연결] 데이트베이스와 연결됨");
+=======
+			System.out.println("[연결] 데이터베이스와 연결됨");
+>>>>>>> 75aa3e26e6b4df41006331032484b343abe009d7
 		} 
 		catch (NamingException e) {e.printStackTrace();}
 	}
@@ -176,5 +180,43 @@ public class MemberDAO {
 			conn .close();
 		} catch (SQLException e) {e.printStackTrace();}
 	}
+<<<<<<< HEAD
+=======
+
+// 회원 로그인
+	public boolean isExisted(MemberVO memberVO) {
+		boolean result = false;
+		
+		String id  = memberVO.getId ();
+		String pwd = memberVO.getPwd();
+		
+		try {
+			conn = dataFactory.getConnection();
+		
+			query = "SELECT DECODE(COUNT(*), 1, 'true', 'false') AS result"
+			      + "  FROM member"
+			      + " WHERE id  = ?"
+			      + "   AND pwd = ?";
+			System.out.println("isExisted() => " + query);
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+			rs = pstmt.executeQuery();
+			
+			rs.next();
+			result = Boolean.parseBoolean(rs.getString("result"));
+
+			if (result)
+				System.out.println("[체크] 가입된 회원 정보와 일치");
+			else 
+				System.out.println("[체크] 가입된 회원 정보와 불일치");
+		
+		} 
+		catch (SQLException e) {e.printStackTrace();}
+		
+		return result;
+	}
+>>>>>>> 75aa3e26e6b4df41006331032484b343abe009d7
 	
 }
