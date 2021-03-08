@@ -9,7 +9,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
-<script src="${contextPath}/assets/js/menu2.js"></script>
+<script src="${contextPath}/js/main.js"></script>
+<script src="${contextPath}/js/menu2.js"></script>
 
 <jsp:include page="/header.jsp"></jsp:include>
 <style>
