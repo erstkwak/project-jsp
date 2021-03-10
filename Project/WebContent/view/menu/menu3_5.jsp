@@ -26,7 +26,24 @@
 <!-- // 페이지 소개 -->
 
 <div style="text-align: center">
-	<img width = "200px" height = "200px" src="/images/5.jpg"	/>
+	<img width = "800px" height = "800px" src="/images/5.jpg"	/>
 </div>
-
+<div style="text-align: center">
+	순서 : 
+</div>
+<div style="text-align: center">
+	추천 유튜버<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	추천1 : 핏블리 <br>
+	 <iframe width="800px" height="800px" src="https://www.youtube.com/embed/d5FA5IxK74Q?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+	추천2 : 지기TV <br> 
+	 <iframe width="800px" height="800px" src="https://www.youtube.com/embed/w4pPJq9VVd0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+<br>
+<br>
+<br>
+<br>
+</div>
 <jsp:include page="/footer.jsp"></jsp:include>

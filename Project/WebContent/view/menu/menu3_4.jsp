@@ -14,20 +14,40 @@
 <section id="breadcrumbs" class="breadcrumbs">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
-      <h2>이두·삼두 운동</h2>
+      <h2>이두 운동</h2>
       <ol>
         <li><a href="${contextPath}/">홈</a></li>
         <li><a href="${contextPath}/menu3.jsp">운동</a></li>
-        <li>이두·삼두 운동</li>
+        <li>이두 운동</li>
       </ol>
     </div>
   </div>
 </section>
 <!-- // 페이지 소개 -->
-
+<br>
+<br>
+<br>
+<br>
 <div style="text-align: center">
-	<img width = "200px" height = "200px" src="/images/4_1.jpg"	/><br>
-	<img width = "200px" height = "200px" src="/images/4_2.jpg"	/>
+	<img width = "800px" height = "800px" src="/images/4-1.jpg"	/><br>
+	<img width = "800px" height = "800px" src="/images/4-2.jpg"	/><br>
 </div>
-
+<div style="text-align: center">
+	순서 : 
+</div>
+<div style="text-align: center">
+	추천 유튜버<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	추천1 : 핏블리 <br>
+	 <iframe width="800px" height="800px" src="https://www.youtube.com/embed/_zG1_oqc27o?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+	추천2 : 지기TV <br> 
+	 <iframe width="800px" height="800px" src="https://www.youtube.com/embed/VtgReO_9nlY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+<br>
+<br>
+<br>
+<br>
+</div>
 <jsp:include page="/footer.jsp"></jsp:include>

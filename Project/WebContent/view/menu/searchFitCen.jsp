@@ -10,7 +10,7 @@
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <script src="${contextPath}/js/main.js"></script>
-<script src="${contextPath}/js/menu2.js"></script>
+<script src="${contextPath}/js/searchFitCen.js"></script>
 
 <jsp:include page="/header.jsp"></jsp:include>
 <style>

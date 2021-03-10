@@ -67,11 +67,9 @@
 
       <div class="row">
         <div class="col-lg-9 text-center text-lg-left">
-          <h3>We've created more than <span>200 websites</span> this year!</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="col-lg-3 cta-btn-container text-center">
-          <a class="cta-btn align-middle" href="#">Request a quote</a>
+          <h3>전국민 <span>보디빌더</span> 만들기 프로젝트 </h3>
+          <p> 따라하기 쉽고 누구나 할 수있는 운동으로<p> 
+          <p> 전국민이 헬린이에서 보디빌더 만들기 프로젝트</p>
         </div>
       </div>
 
@@ -83,50 +81,29 @@
     <div class="container">
 
       <div class="section-title" data-aos="fade-up">
-        <h2>Check out <strong>our services</strong></h2>
+        <h2>운동을 처음하시거나 접근하기 힘드신분들    <strong>주목!!!!</strong></h2>
       </div>
 
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="icon-box" data-aos="fade-up">
             <div class="icon"><i class="icofont-computer"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="title"><a href="http://localhost:9090/map?cmd=VIEW&idx=1&sc=">주변 헬스장 찾기</a></h4>
+            <p class="description"> 주변 가까운 지역의 헬스장을 찾아 가봐요 </p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <h4 class="title"><a href="http://localhost:9090/mboard/BoardListAction.do">질문 게시판</a></h4>
+            <p class="description">운동을 하다 모르겠거나 궁금한점 질문해봐요 </p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="icofont-earth"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="icofont-image"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="icofont-settings"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="icofont-tasks-alt"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <h4 class="title"><a href="http://localhost:9090/gbook?cmd=GUESTBOOKLIST">방명록</a></h4>
+            <p class="description">오늘 한 운동 인증을 해봐요 </p>
           </div>
         </div>
       </div>
@@ -146,9 +123,9 @@
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
+            <li data-filter=".filter-app">보충제</li>
+            <li data-filter=".filter-card">운동기구</li>
+            <li data-filter=".filter-web">운동복</li>
           </ul>
         </div>
       </div>
@@ -158,90 +135,90 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>App 1</h4>
-            <p>App</p>
+            <h4>머슬 팜 100% Whey 단백질, 초콜릿 우유</h4>
+            <p>67,000원</p>
             <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://kr.iherb.com/pr/MusclePharm-Combat-100-Whey-Protein-Chocolate-Milk-5-lbs-2269-g/70913?utm_source=naver&utm_medium=cpc&utm_campaign=shopping&NaPm=ct%3Dkm2wicz4%7Cci%3Dacaea0a57dfef9b4cf52d1235402840806799e15%7Ctr%3Dslsl%7Csn%3D987957%7Chk%3D072483fff9ae766b877a709df4e810a25d24c591" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>Web 3</h4>
-            <p>Web</p>
+            <h4>나이키 스포츠웨어 테크 폴리스 세트</h4>
+            <p>109,000원</p>
             <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://www.nike.com/kr/ko_kr/t/baby/ap/young-athletes/DB7388-063/rqpy70/nsw-tech-fleece-set?utm_source=Naver&utm_medium=PS&utm_campaign=365DIGITAL_Naver_SP_Shopping_all_PC&cp=24588836459_sh_&n_media=11068&n_query=%EB%82%98%EC%9D%B4%ED%82%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%EB%B3%B5%EC%84%B8%ED%8A%B8&n_rank=2&n_ad_group=grp-a001-02-000000008230764&n_ad=nad-a001-02-000000109775653&n_campaign_type=2&n_mall_pid=DB7388-063&n_ad_group_type=2&NaPm=ct%3Dkm2wmk7k%7Cci%3D0zq00002eyvuYZogB1iF%7Ctr%3Dpla%7Chk%3D2945f7e15d975ceaacac88ee22599cd09f43bdaa#0" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>App 2</h4>
-            <p>App</p>
+            <h4>옵티멈 뉴트리션 더블 리치 초콜릿</h4>
+            <p>72,000원</p>
             <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://kr.iherb.com/pr/Optimum-Nutrition-Gold-Standard-100-Whey-Double-Rich-Chocolate-5-lbs-2-27-kg/27509" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>Card 2</h4>
-            <p>Card</p>
+            <h4>가정용 딥스바</h4>
+            <p>119,000원</p>
             <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://healthybros.co.kr/product/detail.html?product_no=58&ttm_media_type=google&ttm_product=248745&ttm_campaign=472&gclid=EAIaIQobChMI-JSMxeek7wIVyL2WCh3GOQrfEAQYBiABEgLtE_D_BwE" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>Web 2</h4>
-            <p>Web</p>
+            <h4>언더아머 남자 트레이닝복 세트 챌린져 II </h4>
+            <p>104,500원</p>
             <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://www.29cm.co.kr/product/827267?utm_term=827267&naver_code=naver_ep&utm_content=conversion_navershopping&BSPRG=NAVERSH&utm_medium=display&BSCCN1=827267&BSCPN=CMCOM&utm_campaign=conversion_navershopping&utm_source=naver&nv_ad=pla&n_media=11068&n_query=%EC%96%B8%EB%8D%94%EC%95%84%EB%A8%B8%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%EB%B3%B5%EC%84%B8%ED%8A%B8&n_rank=2&n_ad_group=grp-a001-02-000000011031422&n_ad=nad-a001-02-000000107234232&n_campaign_type=2&n_mall_pid=827267&n_ad_group_type=2&NaPm=ct%3Dkm2wog40%7Cci%3D0zi0001oeyvuaVDAyf09%7Ctr%3Dpla%7Chk%3D0a5c129f7a49aa2a877aed7cb00480f3cfbfc5f82" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>App 3</h4>
-            <p>App</p>
+            <h4>신타6 울트라 프리미엄 프로틴 매트릭스</h4>
+            <p>72,000원</p>
             <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://kr.iherb.com/pr/BSN-Syntha-6-Ultra-Premium-Protein-Matrix-Chocolate-Peanut-Butter-5-0-lb-2-27-kg/24889" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>Card 1</h4>
-            <p>Card</p>
+            <h4>더 안전한, 터프에이프 풀업바</h4>
+            <p>19,000원</p>
             <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://www.funshop.co.kr/goods/detail/83155?gclid=EAIaIQobChMI-JSMxeek7wIVyL2WCh3GOQrfEAQYBCABEgJT9fD_BwE" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>Card 3</h4>
-            <p>Card</p>
+            <h4>미니마사지기</h4>
+            <p>49,900원</p>
             <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://www.klug.kr/product/detail.html?product_no=21&utm_source=google&utm_medium=cpc&cafe_mkt=google&utm_campaign=%ED%81%B4%EB%9F%AD_%EB%AF%B8%EB%8B%88_SP_%EC%A0%84%EC%B2%B4_%EB%A9%94%EC%9D%B8&utm_content=%EC%A0%84%EC%B2%B4_%EC%A0%84%EC%B2%B4&utm_term=21%EB%B2%88&ctnakey=03-1674-10258-145332" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
           <div class="portfolio-info">
-            <h4>Web 3</h4>
-            <p>Web</p>
+            <h4>아디다스 마샬아츠 남여공용 트레이닝복 츄리닝 세트</h4>
+            <p>105,000원</p>
             <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="http://www.11st.co.kr/products/3198216309?utm_medium=%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90&utm_source=%EB%84%A4%EC%9D%B4%EB%B2%84_PC_PCS&utm_campaign=%EB%84%A4%EC%9D%B4%EB%B2%84pc_%EA%B0%80%EA%B2%A9%EB%B9%84%EA%B5%90%EA%B8%B0%EB%B3%B8&NaPm=ct%3Dkm2wr3sg%7Cci%3Dd812f5f6456764f18642c87c27fbdf158f65d687%7Ctr%3Dplac%7Csn%3D17703%7Chk%3D670733ae94d4b574462deb54712bb63f0d2ba489&utm_term=" target=_blank class="details-link" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
 
@@ -255,21 +232,25 @@
     <div class="container">
 
       <div class="section-title" data-aos="fade-up">
-        <h2>Our <strong>Clients</strong></h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <h2>주요 <strong>관련사이트</strong></h2>
+        <p> 헬스,다이어트 등 관련된 각종 유명사이트</p>
       </div>
 
       <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
 
         <div class="col-lg-3 col-md-4 col-xs-6">
           <div class="client-logo">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <a href="https://rankingdak.com/?gclid=EAIaIQobChMI576_4Oqk7wIVyb2WCh17PQU_EAAYASAAEgIwV_D_BwE" target=_blank>
+            	<img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            </a>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-4 col-xs-6">
           <div class="client-logo">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          	<a href="http://www.health49.com/?act=main" target=_blank>
+            	<img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+            </a>	
           </div>
         </div>
 
