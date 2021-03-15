@@ -14,6 +14,22 @@
   pageContext.setAttribute("br", "<br>"); 
 %>
  
+<jsp:include page="/header.jsp"></jsp:include>
+
+<!-- 페이지 소개 // -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>공지사항</h2>
+      <ol>
+        <li><a href="${contextPath}/">홈</a></li>
+        <li>공지사항</li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- // 페이지 소개 --> 
+ 
 <c:set var="contextPath"  value="${pageContext.request.contextPath}"  />
 <head>
    <meta charset="UTF-8">
@@ -95,10 +111,19 @@
  </script>
 </head>
 <body>
+     <c:choose>
+	<c:when test="${article.id eq 'admin'}">
+		<c:set var="writer" value="관리자" />
+	</c:when>
+	<c:otherwise>
+		<c:set var="writer" value="${article.id}" />
+	</c:otherwise>
+</c:choose>
+
 <div id="div_view_article" >
   <table  border=1  align="center">
   <tr>
-   <td width=150 align="center" bgcolor=#FF9933>
+   <td width=150 align="center">
       글번호
    </td>
    <td >
@@ -108,16 +133,16 @@
    </td>
   </tr>
   <tr>
-    <td width="150" align="center" bgcolor="#FF9933">
-      작성자 아이디
+    <td width="150" align="center">
+      작성자
    </td>
    <td >
     <%-- <input type=text value="${article.id }" name="writer"  disabled /> --%>
-    ${article.id }
+    ${writer}
    </td>
   </tr>
   <tr>
-    <td width="150" align="center" bgcolor="#FF9933">
+    <td width="150" align="center">
       제목 
    </td>
    <td>
@@ -126,7 +151,7 @@
    </td>   
   </tr>
   <tr>
-    <td width="150" align="center" bgcolor="#FF9933">
+    <td width="150" align="center">
       내용
    </td>
    <td>
@@ -137,7 +162,7 @@
  
 <c:if test="${not empty article.imageFileName && article.imageFileName!='null' }">  
 <tr>
-    <td width="150" align="center" bgcolor="#FF9933"  rowspan="2">
+    <td width="150" align="center" rowspan="2">
       이미지
    </td>
    <td>
@@ -153,7 +178,7 @@
   </tr>
  </c:if>
   <tr>
-	   <td width="150" align="center" bgcolor="#FF9933">
+	   <td width="150" align="center">
 	      등록일자
 	   </td>
 	   <td>
@@ -173,7 +198,7 @@
 	    <input type=button value="수정하기" onClick="fn_modify()">
 	    <input type=button value="삭제하기" onClick="fn_remove_article('${contextPath}/notice/removeArticle.do', ${article.articleNO})">
 	    <input type=button value="리스트로 돌아가기"  onClick="backToList()">
-	     <input type=button value="답글쓰기"  onClick="fn_reply_form('${contextPath}/notice/replyForm.do', ${article.articleNO})">
+	     <!--  <input type=button value="답글쓰기"  onClick="fn_reply_form('${contextPath}/notice/replyForm.do', ${article.articleNO})">-->
    </td>
   </tr>
  </table>
@@ -184,24 +209,24 @@
   <form name="frmArticle" method="post"  action="${contextPath}"  enctype="multipart/form-data">
   <table  border=0  align="center">
   <tr>
-   <td width=150 align="center" bgcolor=#FF9933>
+   <td width=150 align="center">
       글번호
    </td>
    <td >
-    <input type="text"  value="${article.articleNO }"  />
+    <input type="text"  value="${article.articleNO }"  disabled/>
     <input type="hidden" name="articleNO" value="${article.articleNO}"  />
    </td>
   </tr>
   <tr>
-    <td width="150" align="center" bgcolor="#FF9933">
-      작성자 아이디
+    <td width="150" align="center">
+      작성자
    </td>
    <td >
-    <input type=text value="${article.id }" name="writer" />
+    <input type=text value="${writer}" name="writer" disabled/>
    </td>
   </tr>
   <tr>
-    <td width="150" align="center" bgcolor="#FF9933">
+    <td width="150" align="center">
       제목 
    </td>
    <td>
@@ -209,7 +234,7 @@
    </td>   
   </tr>
   <tr>
-    <td width="150" align="center" bgcolor="#FF9933">
+    <td width="150" align="center">
       내용
    </td>
    <td>
@@ -219,7 +244,7 @@
  
 <c:if test="${not empty article.imageFileName && article.imageFileName!='null' }">  
 <tr>
-    <td width="150" align="center" bgcolor="#FF9933"  rowspan="2">
+    <td width="150" align="center" rowspan="2">
       이미지
    </td>
    <td>
@@ -235,21 +260,21 @@
   </tr>
  </c:if>
   <tr>
-	   <td width="150" align="center" bgcolor="#FF9933">
+	   <td width="150" align="center">
 	      등록일자
 	   </td>
 	   <td>
-	    <input type=text value="<fmt:formatDate value="${article.writeDate}" />" />
+	    <input type=text value="<fmt:formatDate value="${article.writeDate}" />" disabled/>
 	   </td>   
   </tr>
   <tr >
 	   <td colspan="2"   align="center" >
 	       <input type=button value="수정반영하기"   onClick="fn_modify_article(frmArticle)"  >
-           <input type=button value="취소"  onClick="backToList(frmArticle)">
+         <input type=button value="취소"  onClick="backToList(frmArticle)">
 	   </td>   
   </tr>
  </table>
  </form>
  </div>
-</body>
-</html>
+
+<jsp:include page="/footer.jsp"></jsp:include>

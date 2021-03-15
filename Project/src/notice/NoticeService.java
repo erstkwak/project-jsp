@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public class NoticeService {
+
 	NoticeDAO noticeDAO;
 
 	public NoticeService() {
@@ -13,9 +14,9 @@ public class NoticeService {
 
 	public Map listArticles(Map<String, Integer> pagingMap) {
 		Map articlesMap = new HashMap();
-		//List<ArticleVO> articlesList = noticeDAO.selectAllArticles(pagingMap);
-		List<ArticleVO> noticeArticleList = noticeDAO.selectAllArticles(pagingMap, "y");
-		List<ArticleVO> articlesList = noticeDAO.selectAllArticles(pagingMap, "n");
+		//List<NoticeVO> articlesList = noticeDAO.selectAllArticles(pagingMap);
+		List<NoticeVO> noticeArticleList = noticeDAO.selectAllArticles(pagingMap, "y");
+		List<NoticeVO> articlesList = noticeDAO.selectAllArticles(pagingMap, "n");
 		int totArticles = noticeDAO.selectTotArticles();
 		articlesMap.put("noticeArticlesList", noticeArticleList);
 		articlesMap.put("articlesList", articlesList);
@@ -24,22 +25,22 @@ public class NoticeService {
 		return articlesMap;
 	}
 
-	public List<ArticleVO> listArticles() {
-		List<ArticleVO> articlesList = noticeDAO.selectAllArticles();
+	public List<NoticeVO> listArticles() {
+		List<NoticeVO> articlesList = noticeDAO.selectAllArticles();
 		return articlesList;
 	}
 
-	public int addArticle(ArticleVO article) {
+	public int addArticle(NoticeVO article) {
 		return noticeDAO.insertNewArticle(article);
 	}
 
-	public ArticleVO viewArticle(int articleNO) {
-		ArticleVO article = null;
+	public NoticeVO viewArticle(int articleNO) {
+		NoticeVO article = null;
 		article = noticeDAO.selectArticle(articleNO);
 		return article;
 	}
 
-	public void modArticle(ArticleVO article) {
+	public void modArticle(NoticeVO article) {
 		noticeDAO.updateArticle(article);
 	}
 
@@ -49,7 +50,7 @@ public class NoticeService {
 		return articleNOList;
 	}
 
-	public int addReply(ArticleVO article) {
+	public int addReply(NoticeVO article) {
 		return noticeDAO.insertNewArticle(article);
 	}
 

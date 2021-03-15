@@ -10,7 +10,7 @@
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <script src="${contextPath}/js/main.js"></script>
-<script src="${contextPath}/js/menu2.js"></script>
+<script src="${contextPath}/js/searchFitCen.js"></script>
 
 <jsp:include page="/header.jsp"></jsp:include>
 <style>
@@ -171,7 +171,7 @@
 		</tr>		
 			<h2 class="searchbutton">
 				<input type= "text" id="search-word" >
-				<input type= "button" value="지역검색" id="start-search-btn">
+				<input type= "button" value="검색" id="start-search-btn">
 			</h2>
 			<div id="paging">
 			</div>

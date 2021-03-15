@@ -20,17 +20,18 @@ public class GuestbookDelete implements Action {
 		String reqgb_no = request.getParameter("gb_no");
 		int    gb_no	= Integer.parseInt(reqgb_no);
 		String gb_pass  = request.getParameter("gb_pass");
-		
+
 		GuestbookDao guestbookDao = new GuestbookDao();
 		GuestbookVo  guestbookVo = new GuestbookVo();
-		
+
 		guestbookVo.setGb_no(gb_no);
 		guestbookVo.setGb_pass(gb_pass);
-		
+
 		guestbookDao.guestbookDelete(guestbookVo);
-		
-		String path = "/gbook?cmd=GUESTBOOKLIST";
+
+		String path = "/view/guestbook/DeleteMessage.jsp";
 		request.getRequestDispatcher(path).forward(request, response);
+
 
 	}
 

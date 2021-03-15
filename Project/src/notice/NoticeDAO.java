@@ -7,13 +7,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-
 public class NoticeDAO {
+	
 	private DataSource dataFactory;
 	Connection conn;
 	PreparedStatement pstmt;
@@ -72,7 +71,7 @@ public class NoticeDAO {
 		      Date writeDate= rs.getDate("writeDate");
 		      boolean newArticle =Boolean.parseBoolean(rs.getString("newArticle"));
 		      
-		      ArticleVO article = new ArticleVO();
+		      NoticeVO article = new NoticeVO();
 		      article.setLevel(level);
 		      article.setArticleNO(articleNO);
 		      article.setParentNO(parentNO);
@@ -138,7 +137,7 @@ public class NoticeDAO {
 		      Date writeDate= rs.getDate("writeDate");
 		      boolean newArticle =Boolean.parseBoolean(rs.getString("newArticle"));
 		      
-		      ArticleVO article = new ArticleVO();
+		      NoticeVO article = new NoticeVO();
 		      article.setLevel(level);
 		      article.setArticleNO(articleNO);
 		      article.setParentNO(parentNO);
@@ -175,7 +174,7 @@ public class NoticeDAO {
 				String content = rs.getString("content");
 				String id = rs.getString("id");
 				Date writeDate = rs.getDate("writeDate");
-				ArticleVO article = new ArticleVO();
+				NoticeVO article = new NoticeVO();
 				article.setLevel(level);
 				article.setArticleNO(articleNO);
 				article.setParentNO(parentNO);
@@ -213,7 +212,7 @@ public class NoticeDAO {
 		return 0;
 	}
 
-	public int insertNewArticle(ArticleVO article) {
+	public int insertNewArticle(NoticeVO article) {
 		int articleNO = getNewArticleNO();
 		try {
 			conn = dataFactory.getConnection();
@@ -245,8 +244,8 @@ public class NoticeDAO {
 		return articleNO;
 	}
 
-	public ArticleVO selectArticle(int articleNO) {
-		ArticleVO article = new ArticleVO();
+	public NoticeVO selectArticle(int articleNO) {
+		NoticeVO article = new NoticeVO();
 		try {
 			conn = dataFactory.getConnection();
 			String query = "select articleNO,parentNO,title,content, imageFileName,id,writeDate" + " from notice"
@@ -280,7 +279,7 @@ public class NoticeDAO {
 		return article;
 	}
 
-	public void updateArticle(ArticleVO article) {
+	public void updateArticle(NoticeVO article) {
 		int articleNO = article.getArticleNO();
 		String title = article.getTitle();
 		String content = article.getContent();

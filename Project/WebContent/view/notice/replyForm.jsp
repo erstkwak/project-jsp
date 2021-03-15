@@ -7,12 +7,13 @@
 <%
   request.setCharacterEncoding("UTF-8");
 %> 
-<head>
-<meta charset="UTF-8">
+
+<jsp:include page="/header.jsp"></jsp:include>
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 <script type="text/javascript">
   function backToList(obj){
-	 obj.action="${contextPath}/notice/listArticles.do";
+	 obj.action="${contextPath}/board/listArticles.do";
 	 obj.submit();
   }
  
@@ -26,15 +27,30 @@
       }
   }  
 </script> 
-<title>답글쓰기 페이지</title>
-</head>
-<body>
+
+<!-- 페이지 소개 // -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>공지사항</h2>
+      <ol>
+        <li><a href="${contextPath}/">홈</a></li>
+        <li>공지사항</li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- // 페이지 소개 -->
+
+
+
+<div style="text-align: center">
  <h1 style="text-align:center">답글쓰기</h1>
   <form name="frmReply" method="post"  action="${contextPath}/notice/addReply.do"   enctype="multipart/form-data">
     <table align="center">
     <tr>
 			<td align="right"> 글쓴이:&nbsp; </td>
-			<td><input type="text" size="5" value="lee" disabled /> </td>
+			<td><input type="text" size="5" value="관리자" disabled /> </td>
 		</tr>
 		<tr>
 			<td align="right">글제목:&nbsp;  </td>
@@ -59,5 +75,6 @@
 		</tr>
     </table>
   </form>
-</body>
-</html>
+</div>
+
+<jsp:include page="/footer.jsp"></jsp:include>

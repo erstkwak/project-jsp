@@ -6,9 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import guest.base.Action;
 import guest.dao.GuestbookDao;
 import guest.vo.GuestbookVo;
-import guest.base.Action;
 
 public class GuestbookWrite implements Action {
 
@@ -16,24 +16,26 @@ public class GuestbookWrite implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 넘어온 정보로 저장
 		// guestbook_id, guestbook_password, guestbook_content
+		// hidden : bnum, lvl, step, nref
 		response.setCharacterEncoding("utf-8");
 
-		String guestbook_id     = request.getParameter("guestbook_id");		
-		String guestbook_password = request.getParameter("guestbook_password");
-		String guestbook_content  = request.getParameter("guestbook_content");
+		String gb_id     = request.getParameter("gb_id");		
+		String gb_pass = request.getParameter("gb_pass");
+		String gb_con  = request.getParameter("gb_con");
+
+		int      bnum    = Integer.parseInt( request.getParameter("bnum"));
+		int      lvl     = Integer.parseInt( request.getParameter("lvl"));
+		int      step    = Integer.parseInt( request.getParameter("step"));
+		int      nref    = Integer.parseInt( request.getParameter("nref"));
+
+		GuestbookVo  guestbookVo  = new GuestbookVo(gb_id, gb_pass, gb_con, bnum, lvl, step, nref);
 
 		GuestbookDao guestbookdao = new GuestbookDao();
-		GuestbookVo  guestbookVo  = new GuestbookVo();
-
-		guestbookVo.setGb_id(guestbook_id);
-		guestbookVo.setGb_pass(guestbook_password);
-		guestbookVo.setGb_con(guestbook_content);
-
 		guestbookdao.guestbookInsert(guestbookVo);
 
 		// 메뉴리스트로 이동(조회)한다
-		String path = "/gbook?cmd=GUESTBOOKLIST";		
-		request.getRequestDispatcher(path).forward(request, response);
+		Action action = new GuestbookList();
+		action.execute(request, response);
 
 	}
 }

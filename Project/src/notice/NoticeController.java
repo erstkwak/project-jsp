@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -17,41 +16,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.FileUtils;
 
-/**
- * Servlet implementation class BoardController
- */
 @WebServlet("/notice/*")
 public class NoticeController extends HttpServlet {
+
 	private static String ARTICLE_IMAGE_REPO = "C:\\notice\\article_image";
 	NoticeService noticeService;
-	ArticleVO articleVO;
+	NoticeVO noticeVO;
 
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
 	public void init(ServletConfig config) throws ServletException {
 		noticeService = new NoticeService();
-		articleVO = new ArticleVO();
+		noticeVO = new NoticeVO();
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
 		doHandle(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doHandle(request, response);
 	}
@@ -64,7 +49,7 @@ public class NoticeController extends HttpServlet {
 		String action = request.getPathInfo();
 		System.out.println("action:" + action);
 		try {
-			List<ArticleVO> articlesList = new ArrayList<ArticleVO>();
+			List<NoticeVO> articlesList = new ArrayList<NoticeVO>();
 			if (action==null){	
 				String _section=request.getParameter("section");
 				String _pageNum=request.getParameter("pageNum");
@@ -102,14 +87,14 @@ public class NoticeController extends HttpServlet {
 				String imageFileName = articleMap.get("imageFileName");
 				String notice_yn = articleMap.get("notice_yn");
 				
-				articleVO.setParentNO(0);
-				articleVO.setId("admin");
-				articleVO.setTitle(title);
-				articleVO.setContent(content);
-				articleVO.setImageFileName(imageFileName);
-				articleVO.setNotice_yn(notice_yn);
+				noticeVO.setParentNO(0);
+				noticeVO.setId("admin");
+				noticeVO.setTitle(title);
+				noticeVO.setContent(content);
+				noticeVO.setImageFileName(imageFileName);
+				noticeVO.setNotice_yn(notice_yn);
 				
-				articleNO = noticeService.addArticle(articleVO);
+				articleNO = noticeService.addArticle(noticeVO);
 				if (imageFileName != null && imageFileName.length() != 0) {
 					File srcFile = new File(ARTICLE_IMAGE_REPO + "\\" + "temp" + "\\" + imageFileName);
 					File destDir = new File(ARTICLE_IMAGE_REPO + "\\" + articleNO);
@@ -117,28 +102,28 @@ public class NoticeController extends HttpServlet {
 					FileUtils.moveFileToDirectory(srcFile, destDir, true);
 				}
 				PrintWriter pw = response.getWriter();
-				pw.print("<script>" + "  alert('�깉湲��쓣 異붽��뻽�뒿�땲�떎.');" + " location.href='" + request.getContextPath()
+				pw.print("<script>" + " location.href='" + request.getContextPath()
 						+ "/notice/listArticles.do';" + "</script>");
 
 				return;
 			} else if (action.equals("/viewArticle.do")) {
 				String articleNO = request.getParameter("articleNO");
-				articleVO = noticeService.viewArticle(Integer.parseInt(articleNO));
-				request.setAttribute("article", articleVO);
+				noticeVO = noticeService.viewArticle(Integer.parseInt(articleNO));
+				request.setAttribute("article", noticeVO);
 				nextPage = "/view/notice/viewArticle.jsp";
 			} else if (action.equals("/modArticle.do")) {
 				Map<String, String> articleMap = upload(request, response);
 				int articleNO = Integer.parseInt(articleMap.get("articleNO"));
-				articleVO.setArticleNO(articleNO);
+				noticeVO.setArticleNO(articleNO);
 				String title = articleMap.get("title");
 				String content = articleMap.get("content");
 				String imageFileName = articleMap.get("imageFileName");
-				articleVO.setParentNO(0);
-				articleVO.setId("admin");
-				articleVO.setTitle(title);
-				articleVO.setContent(content);
-				articleVO.setImageFileName(imageFileName);
-				noticeService.modArticle(articleVO);
+				noticeVO.setParentNO(0);
+				noticeVO.setId("admin");
+				noticeVO.setTitle(title);
+				noticeVO.setContent(content);
+				noticeVO.setImageFileName(imageFileName);
+				noticeService.modArticle(noticeVO);
 				if (imageFileName != null && imageFileName.length() != 0) {
 					String originalFileName = articleMap.get("originalFileName");
 					File srcFile = new File(ARTICLE_IMAGE_REPO + "\\" + "temp" + "\\" + imageFileName);
@@ -150,8 +135,8 @@ public class NoticeController extends HttpServlet {
 					oldFile.delete();
 				}
 				PrintWriter pw = response.getWriter();
-				pw.print("<script>" + "  alert('湲��쓣 �닔�젙�뻽�뒿�땲�떎.');" + " location.href='" + request.getContextPath()
-						+ "/view/notice/viewArticle.do?articleNO=" + articleNO + "';" + "</script>");
+				pw.print("<script>" + " location.href='" + request.getContextPath()
+						+ "/notice/viewArticle.do?articleNO=" + articleNO + "';" + "</script>");
 				return;
 			} else if (action.equals("/removeArticle.do")) {
 				int articleNO = Integer.parseInt(request.getParameter("articleNO"));
@@ -164,7 +149,7 @@ public class NoticeController extends HttpServlet {
 				}
 
 				PrintWriter pw = response.getWriter();
-				pw.print("<script>" + "  alert('湲��쓣 �궘�젣�뻽�뒿�땲�떎.');" + " location.href='" + request.getContextPath()
+				pw.print("<script>" + " location.href='" + request.getContextPath()
 						+ "/notice/listArticles.do';" + "</script>");
 				return;
 
@@ -181,12 +166,12 @@ public class NoticeController extends HttpServlet {
 				String title = articleMap.get("title");
 				String content = articleMap.get("content");
 				String imageFileName = articleMap.get("imageFileName");
-				articleVO.setParentNO(parentNO);
-				articleVO.setId("admin");
-				articleVO.setTitle(title);
-				articleVO.setContent(content);
-				articleVO.setImageFileName(imageFileName);
-				int articleNO = noticeService.addReply(articleVO);
+				noticeVO.setParentNO(parentNO);
+				noticeVO.setId("admin");
+				noticeVO.setTitle(title);
+				noticeVO.setContent(content);
+				noticeVO.setImageFileName(imageFileName);
+				int articleNO = noticeService.addReply(noticeVO);
 				if (imageFileName != null && imageFileName.length() != 0) {
 					File srcFile = new File(ARTICLE_IMAGE_REPO + "\\" + "temp" + "\\" + imageFileName);
 					File destDir = new File(ARTICLE_IMAGE_REPO + "\\" + articleNO);
@@ -194,8 +179,8 @@ public class NoticeController extends HttpServlet {
 					FileUtils.moveFileToDirectory(srcFile, destDir, true);
 				}
 				PrintWriter pw = response.getWriter();
-				pw.print("<script>" + "  alert('�떟湲��쓣 異붽��뻽�뒿�땲�떎.');" + " location.href='" + request.getContextPath()
-						+ "/view/notice/viewArticle.do?articleNO="+articleNO+"';" + "</script>");
+				pw.print("<script>" + " location.href='" + request.getContextPath()
+						+ "/notice/viewArticle.do?articleNO="+articleNO+"';" + "</script>");
 				return;
 			}
 
@@ -223,10 +208,6 @@ public class NoticeController extends HttpServlet {
 					System.out.println(fileItem.getFieldName() + "=" + fileItem.getString(encoding));
 					articleMap.put(fileItem.getFieldName(), fileItem.getString(encoding));
 				} else {
-					System.out.println("�뙆�씪誘명꽣紐�:" + fileItem.getFieldName());
-					//System.out.println("�뙆�씪紐�:" + fileItem.getName());
-					System.out.println("�뙆�씪�겕湲�:" + fileItem.getSize() + "bytes");
-					//articleMap.put(fileItem.getFieldName(), fileItem.getName());
 					if (fileItem.getSize() > 0) {
 						int idx = fileItem.getName().lastIndexOf("\\");
 						if (idx == -1) {
@@ -234,8 +215,7 @@ public class NoticeController extends HttpServlet {
 						}
 
 						String fileName = fileItem.getName().substring(idx + 1);
-						System.out.println("�뙆�씪紐�:" + fileName);
-								articleMap.put(fileItem.getFieldName(), fileName);  //�씡�뒪�뵆濡쒕윭�뿉�꽌 �뾽濡쒕뱶 �뙆�씪�쓽 寃쎈줈 �젣嫄� �썑 map�뿉 �뙆�씪紐� ���옣);
+						articleMap.put(fileItem.getFieldName(), fileName);  //�씡�뒪�뵆濡쒕윭�뿉�꽌 �뾽濡쒕뱶 �뙆�씪�쓽 寃쎈줈 �젣嫄� �썑 map�뿉 �뙆�씪紐� ���옣);
 						File uploadFile = new File(currentDirPath + "\\temp\\" + fileName);
 						fileItem.write(uploadFile);
 

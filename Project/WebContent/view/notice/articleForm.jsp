@@ -6,10 +6,23 @@
 <%
   request.setCharacterEncoding("UTF-8");
 %> 
-<c:set var="contextPath"  value="${pageContext.request.contextPath}"  /> 
-<head>
-<meta charset="UTF-8">
-<title>글쓰기창</title>
+
+<jsp:include page="/header.jsp"></jsp:include>
+
+<!-- 페이지 소개 // -->
+<section id="breadcrumbs" class="breadcrumbs">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>공지사항</h2>
+      <ol>
+        <li><a href="${contextPath}/">홈</a></li>
+        <li>공지사항</li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- // 페이지 소개 -->
+
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
    function readURL(input) {
@@ -26,9 +39,7 @@
     obj.submit();
   }
 </script>
- <title>새글 쓰기 창</title>
-</head>
-<body>
+
 <h1 style="text-align:center">새글 쓰기</h1>
   <form name="articleForm" method="post"   action="${contextPath}/notice/addArticle.do"   enctype="multipart/form-data">
     <table border=0 align="center">
@@ -61,5 +72,5 @@
      </tr>
     </table>
   </form>
-</body>
-</html>
+  
+<jsp:include page="/footer.jsp"></jsp:include>

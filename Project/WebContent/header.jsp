@@ -60,8 +60,7 @@
         		<a href="${contextPath}/member/adminInfo.do">관리자</a>
         	</c:when>
         </c:choose>
-        <a href="#">공지사항</a>
-        <a href="#">고객센터</a>
+        <a href="${contextPath}/notice/listArticles.do">공지사항</a>
       </div>
     </div>
   </section>
@@ -75,8 +74,7 @@
 			<!-- GNB // -->
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-        	<li><a href="${contextPath}/view/menu/menu1.jsp">프로젝트</a></li>
-        	<li><a href="${contextPath}/view/menu/menu2.jsp">소개</a></li>
+        	<li><a href="${contextPath}/view/menu/menu2.jsp">프로젝트소개</a></li>
           <li class="drop-down"><a href="${contextPath}/view/menu/menu3.jsp">운동</a>
           	<ul>
           		<li><a href="${contextPath}/view/menu/menu3_1.jsp">어깨 운동</a></li>
