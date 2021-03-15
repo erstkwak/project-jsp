@@ -15,7 +15,7 @@ public class GuestbookList implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String path = "/guestbook/GuestbookForm.jsp";
+		String path = "/view/guestbook/GuestbookForm.jsp";
 		
 		GuestbookDao guestbookDao      = new GuestbookDao();
 		List<GuestbookVo> gbList = guestbookDao.getGuestbookList();
