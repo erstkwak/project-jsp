@@ -13,38 +13,6 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>내용</h3>
-            <p>
-							Eu nulla reprehenderit labore labore ex non sit laborum Lorem nulla labore ullamco consequat proident. Elit voluptate dolore ex fugiat. Pariatur quis cupidatat aliquip sunt laborum ut. Quis labore enim do eu ullamco quis sit adipisicing nulla ad minim. Consectetur ullamco enim velit aute veniam ipsum cupidatat in occaecat consequat labore culpa incididunt aute.
-            </p>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>내용</h3>
-            <p>
-							Eu nulla reprehenderit labore labore ex non sit laborum Lorem nulla labore ullamco consequat proident. Elit voluptate dolore ex fugiat. Pariatur quis cupidatat aliquip sunt laborum ut. Quis labore enim do eu ullamco quis sit adipisicing nulla ad minim. Consectetur ullamco enim velit aute veniam ipsum cupidatat in occaecat consequat labore culpa incididunt aute.
-            </p>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>링크1</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i><a href="#">링크1</a></li>
-              <li><i class="bx bx-chevron-right"></i><a href="#">링크2</a></li>
-              <li><i class="bx bx-chevron-right"></i><a href="#">링크3</a></li>
-              <li><i class="bx bx-chevron-right"></i><a href="#">링크4</a></li>
-              <li><i class="bx bx-chevron-right"></i><a href="#">링크5</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>링크2</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">링크1</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">링크2</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">링크3</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">링크4</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">링크5</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
