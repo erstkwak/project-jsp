@@ -40,7 +40,7 @@
           <div class="carousel-content animate__animated animate__fadeInUp">
             <h2>혼자라고 좌절하지 마세요 !</h2>
             <p>헬스 관련 정보 및 팁 공유와 의견을 나눌 수 있는 게시판으로 가보세요.</p>
-            <div class="text-center"><a href="" class="btn-get-started">게시판으로 이동</a></div>
+            <div class="text-center"><a href="${contextPath}/mboard/BoardListAction.do" class="btn-get-started">게시판으로 이동</a></div>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBCon {
 	private String driver = "oracle.jdbc.OracleDriver";
 	private String url    = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String dbuid  = "jsp";
+	private String dbuid  = "helini";
 	private String dbpwd  = "1234";
 	
 	private Connection conn = null;

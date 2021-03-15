@@ -60,8 +60,7 @@
         		<a href="${contextPath}/member/adminInfo.do">관리자</a>
         	</c:when>
         </c:choose>
-        <a href="#">공지사항</a>
-        <a href="#">고객센터</a>
+        <a href="${contextPath}/notice/listArticles.do">공지사항</a>
       </div>
     </div>
   </section>
