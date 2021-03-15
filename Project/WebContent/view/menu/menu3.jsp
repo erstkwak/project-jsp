@@ -29,18 +29,27 @@
 	<br>
 	<br>
 	<br>
-	처음 운동 시작하니 부위마다 어떤 운동을 올바른 자세로 하는지 모르시죠?<br>
-	저희가 도와드리겠습니다.<br>
+	<p style="text-align:center; font-size:50px">
+	처음 운동 시작하니 부위마다 어떤 운동을 올바른 자세로 하는지 모르시겠죠?<br>
+	저희가 도와드리겠습니다.
+	</p>
 	<br>
 	<br>
 	<br>
-	부위별 운동방법 바로가기<br>
-	<a href="/view/menu/menu3_1.jsp">어깨 운동</a><br>
-	<a href="/view/menu/menu3_2.jsp">가슴 운동</a><br>
-	<a href="/view/menu/menu3_3.jsp">등 운동</a><br>
-	<a href="/view/menu/menu3_4.jsp">이두 운동</a><br>
-	<a href="/view/menu/menu3_5.jsp">삼두 운동</a><br>
-	<a href="/view/menu/menu3_6.jsp">하체 운동</a><br>
+	<br>
+	<p style="text-align:center; font-size:30px">부위별 운동방법 궁금하시다면 부위를 클릭해주세요</p><br>
+	<a style="text-align:center; font-size:30px" href="/view/menu/menu3_1.jsp">어깨</a><br>
+	<a style="text-align:center; font-size:30px" href="/view/menu/menu3_2.jsp">가슴</a><br>
+	<a style="text-align:center; font-size:30px" href="/view/menu/menu3_3.jsp">등</a><br>
+	<a style="text-align:center; font-size:30px" href="/view/menu/menu3_4.jsp">이두</a><br>
+	<a style="text-align:center; font-size:30px" href="/view/menu/menu3_5.jsp">삼두</a><br>
+	<a style="text-align:center; font-size:30px" href="/view/menu/menu3_6.jsp">하체</a><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<br>
 	<br>
 	<br>

@@ -116,7 +116,7 @@
     <div class="container">
 
       <div class="section-title" data-aos="fade-up">
-        <h2>Some of our <strong>recent works</strong></h2>
+        <h2>각종 <strong>헬스 용품</strong></h2>
       </div>
 
       <div class="row" data-aos="fade-up">

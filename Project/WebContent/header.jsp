@@ -75,8 +75,7 @@
 			<!-- GNB // -->
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-        	<li><a href="${contextPath}/view/menu/menu1.jsp">프로젝트</a></li>
-        	<li><a href="${contextPath}/view/menu/menu2.jsp">소개</a></li>
+        	<li><a href="${contextPath}/view/menu/menu2.jsp">프로젝트소개</a></li>
           <li class="drop-down"><a href="${contextPath}/view/menu/menu3.jsp">운동</a>
           	<ul>
           		<li><a href="${contextPath}/view/menu/menu3_1.jsp">어깨 운동</a></li>
