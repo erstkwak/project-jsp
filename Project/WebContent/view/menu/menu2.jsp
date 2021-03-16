@@ -27,22 +27,24 @@
 <div>
 	<br>
 	<br>
-	<p style="margin : 80px; font-size: 40px">프로젝트 소개</p><br>
-	<p style="text-align:center;font-size: 60px">전국민 건강하게 만들기 프로젝트</p><br>
+	<p style="margin : 80px; font-size: 40px; color:#28A8A8 ">프로젝트 소개</p><br>
+	<p style="text-align:center;font-size: 60px; color:#CD7070">전국민 건강하게 만들기 프로젝트</p><br>
 	<br>
 	<br>
 	<br>
-	<p style="margin : 80px; font-size: 40px">사용프로그램<br>
+	<p style="margin : 80px; font-size: 40px; color:#28A8A8">사용프로그램<br>
 	<p style="text-align : center ">
-	<img width = "1200px" height = "400px" src="/images/icon.jpg"	/>&nbsp;&nbsp;&nbsp;
+	<img width = "1200px" height = "400px" src="/images/icon.jpg"	/>
 	</p>
-	<p style="margin : 80px; font-size: 40px">프로젝트 멤버 및 담당 역할</p><br>
-	<p style="text-align : center; font-size: 50px">곽대희(조장) :   </p><br>
-	<p style="text-align : center; font-size: 50px">이동준 :  </p><br>
-	<p style="text-align : center; font-size: 50px">최성완 :  </p><br>
-	<p style="text-align : center; font-size: 50px">송현우 : 주변헬스장 찾기 </p><br>
-	<p style="margin : 80px; font-size: 40px">프로젝트 목표</p><br>
-	<p style="text-align :center; font-size: 50px">스프링을 활용한 풀스택 개발</p>
+	<br>
+	<p style="margin : 80px; font-size: 40px; color:#28A8A8">프로젝트 멤버 및 담당 역할</p><br>
+	<p style="margin-left : 80px;text-align : left; font-size: 30px">곽대희(조장) :   </p><br>
+	<p style="margin-left : 80px;text-align : left; font-size: 30px">이동준 :  </p><br>
+	<p style="margin-left : 80px;text-align : left; font-size: 30px">최성완 :  </p><br>
+	<p style="margin-left : 80px;text-align : left; font-size: 30px">송현우 : 주변헬스장 찾기 </p><br>
+	<br>
+	<p style="margin : 80px; font-size: 40px; color:#28A8A8">프로젝트 목표</p><br>
+	<p style="text-align :center; font-size: 60px; color:#4646CD">JSP을 활용한 풀스택 개발</p>
 	<br>
 	<br>
 	<br>
