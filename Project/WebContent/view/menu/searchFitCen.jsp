@@ -171,7 +171,7 @@
 		</tr>		
 			<h2 class="searchbutton">
 				<input type= "text" id="search-word" >
-				<input type= "button" value="검색" id="start-search-btn">
+				<input type= "button" value="검색" style="color:#646464	" id="start-search-btn">
 			</h2>
 			<div id="paging">
 			</div>
