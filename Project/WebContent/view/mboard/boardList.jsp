@@ -73,7 +73,7 @@
 					<td colspan="5" align = "center">
 						<a href="boardWrite.do">글쓰기</a>
 						<a href="DeleteCheckFormAction.do">체크삭제</a>
-						<a href="/Project/index.jsp">HOME</a>
+						<a href="/index.jsp">HOME</a>
 					</td>
 				</tr>
 			</table>
