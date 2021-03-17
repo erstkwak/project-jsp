@@ -17,4 +17,15 @@
     <location>/view/error/500.jsp</location>
   </error-page>
   
+ 	<servlet>
+     <description>Controller</description>
+     <display-name>CommentController</display-name>
+     <servlet-name>CommentController</servlet-name>
+     <servlet-class>mboard.board.controller.CommentController</servlet-class>
+ 	</servlet>
+	<servlet-mapping>
+     <servlet-name>CommentController</servlet-name>
+     <url-pattern>*.co</url-pattern>
+ 	</servlet-mapping>
+  
 </web-app>

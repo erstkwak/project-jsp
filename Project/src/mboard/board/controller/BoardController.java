@@ -21,7 +21,8 @@ import mboard.board.action.BoardModifyFormAction;
 import mboard.board.action.BoardWriteAction;
 import mboard.board.model.BoardDAO;
 
-@WebServlet("/mboard/*")
+@WebServlet("*.do")
+
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -49,7 +50,7 @@ public class BoardController extends HttpServlet {
         // URI, command 확인
         System.out.println("requestURI : "+requestURI);
         System.out.println("command : "+command);
-        
+        System.out.println("boardController");
         ActionForward forward = null;
         Action action = null;
         

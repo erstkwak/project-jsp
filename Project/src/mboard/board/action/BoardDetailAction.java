@@ -34,7 +34,7 @@ public class BoardDetailAction implements Action{
 		//COMMENT
 		// 게시글 번호를 이용하여 해당 글에 있는 댓글 목록을 가져온다.
 		int idx = Integer.parseInt(request.getParameter("id"));
-		
+		System.out.println(idx);
         CommentDAO commentDAO = CommentDAO.getInstance();
         ArrayList<CommentVO> commentList = commentDAO.getCommentList(idx);
 		System.out.println("~~~~~~~~~~~~~~~~~~"+commentList);
