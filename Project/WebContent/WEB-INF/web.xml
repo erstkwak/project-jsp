@@ -2,27 +2,24 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>Project</display-name>
   
-<<<<<<< HEAD
   <!-- 메인 페이지 설정 -->
-=======
-  <!-- 메인 페이지 -->
->>>>>>> 75aa3e26e6b4df41006331032484b343abe009d7
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   
-<<<<<<< HEAD
+  
+  	<servlet>
+        <description>Controller</description>
+        <display-name>CommentController</display-name>
+        <servlet-name>CommentController</servlet-name>
+        <servlet-class>mboard.board.controller.CommentController</servlet-class>
+    </servlet>
+   	<servlet-mapping>
+        <servlet-name>CommentController</servlet-name>
+        <url-pattern>*.co</url-pattern>
+    </servlet-mapping>
 
-=======
-  <!-- 에러 처리 페이지 -->
-  <error-page>
-    <error-code>404</error-code>
-    <location>/view/error/404.jsp</location>
-  </error-page>
-  <error-page>
-    <error-code>500</error-code>
-    <location>/view/error/500.jsp</location>
-  </error-page>
->>>>>>> 75aa3e26e6b4df41006331032484b343abe009d7
+
+
   
 </web-app>

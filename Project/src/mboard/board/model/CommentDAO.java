@@ -28,8 +28,9 @@ public class CommentDAO {
     {
         int result = 1;
         try {
+        	db 		 = new DBCon();
             conn = db.getConnection();
-            System.out.println("seq 디비 연겨 ㄹ?????????!!!!");
+            System.out.println("seq 디비 연결=========");
             // 시퀀스 값을 가져온다. (DUAL : 시퀀스 값을 가져오기위한 임시 테이블)
             StringBuffer sql = new StringBuffer();
             sql.append("SELECT COMMENT_SEQ.NEXTVAL FROM DUAL");
@@ -51,12 +52,13 @@ public class CommentDAO {
     // 댓글 등록
     public boolean insertComment(CommentVO comment)
     {
-    	System.out.println("등록??????????????????????");
+    	System.out.println("댓글등록_시작==================");
         boolean result = false;
         
         try {
+        	db 		 = new DBCon();
             conn = db.getConnection();
-            System.out.println("db 연결 ????????????????????????!!!");
+            System.out.println("댓글db 연결====================");
             // 자동 커밋을 false로 한다.
             conn.setAutoCommit(false);
             
@@ -66,8 +68,6 @@ public class CommentDAO {
             sql.append(" , COMMENT_PARENT, COMMENT_CONTENT)");
             sql.append(" VALUES(?,?,?,sysdate,?,?)");
 
-
-    
             pstmt = conn.prepareStatement(sql.toString());
             pstmt.setInt(1, comment.getComment_num());
             pstmt.setInt(2, comment.getComment_board());
@@ -77,7 +77,7 @@ public class CommentDAO {
 
             System.out.println("flag전 ~~~~~~~~~");
             int flag = pstmt.executeUpdate();
-            System.out.println("flag~~~~~~~~~~~");
+            System.out.println("flag후~~~~~~~~~~~");
             if(flag > 0){
                 result = true;
                 conn.commit(); // 완료시 커밋
@@ -101,11 +101,11 @@ public class CommentDAO {
     public ArrayList<CommentVO> getCommentList(int idx)
     {
         ArrayList<CommentVO> commentList = new ArrayList<CommentVO>();
-        System.out.println("댓글 목록!!!!!????????????왓어");
+        System.out.println("댓글 목록=====================");
         try {
         	db 		 = new DBCon();
             conn = db.getConnection();
-            System.out.println("db 연결 ????????????????????????!!!");
+            System.out.println("댓글목록db 연결===============");
 
             /* 댓글의 페이지 처리를 하고싶다면 이 쿼리를 사용하면 된다.
              * SELECT * FROM
@@ -135,7 +135,7 @@ public class CommentDAO {
             sql.append("    WHERE COMMENT_BOARD = ?");
             sql.append("    START WITH COMMENT_PARENT = 0");
             sql.append("    CONNECT BY PRIOR COMMENT_NUM = COMMENT_PARENT");    
-
+            
 
             pstmt = conn.prepareStatement(sql.toString());
             pstmt.setInt(1, idx);
@@ -155,7 +155,6 @@ public class CommentDAO {
 
                 commentList.add(comment);
             }
-                
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e.getMessage());
@@ -165,6 +164,117 @@ public class CommentDAO {
         return commentList;
     } // end getCommentList
     
+    // 댓글 삭제
+    public boolean deleteComment(int comment_num) 
+    {
+        boolean result = false;
+ 
+        try {
+        	db 		 = new DBCon();
+            conn = db.getConnection();
+            System.out.println("댓글삭제db연결=====");
+            conn.setAutoCommit(false); // 자동 커밋을 false로 한다.
+ 
+            StringBuffer sql = new StringBuffer();
+            sql.append("DELETE FROM BOARD_COMMENT");
+            sql.append(" WHERE COMMENT_NUM IN");
+            sql.append(" (SELECT COMMENT_NUM");
+            sql.append(" FROM BOARD_COMMENT");
+            sql.append(" START WITH COMMENT_NUM = ?");
+            sql.append(" CONNECT BY PRIOR COMMENT_NUM = COMMENT_PARENT) ");
+            
+            pstmt = conn.prepareStatement(sql.toString());
+            pstmt.setInt(1, comment_num);
+            
+            int flag = pstmt.executeUpdate();
+            if(flag > 0){
+                result = true;
+                conn.commit(); // 완료시 커밋
+            }    
+            System.out.println("삭제커밋============");
+        } catch (Exception e) {
+            try {
+                conn.rollback(); // 오류시 롤백
+            } catch (SQLException sqle) {
+                sqle.printStackTrace();
+            }
+            throw new RuntimeException(e.getMessage());
+        }
+ 
+        close();
+        return result;
+    } // end deleteComment    
+    
+    // 댓글 1개의 정보를 가져온다.
+    public CommentVO getComment(int comment_num)
+    {
+        CommentVO comment = null;
+        try {
+        	db 		 = new DBCon();
+            conn = db.getConnection();
+            System.out.println("댓글하나 데이터 가져오기 db연결=====");
+            StringBuffer sql = new StringBuffer();
+            sql.append("SELECT * FROM BOARD_COMMENT WHERE COMMENT_NUM = ?");
+            
+            pstmt = conn.prepareStatement(sql.toString());
+            pstmt.setInt(1, comment_num);
+            
+            rs = pstmt.executeQuery();
+            while(rs.next())
+            {
+                comment = new CommentVO();
+                comment.setComment_num(rs.getInt("COMMENT_NUM"));
+                comment.setComment_board(rs.getInt("COMMENT_BOARD"));
+                comment.setComment_id(rs.getString("COMMENT_ID"));
+                comment.setComment_date(rs.getDate("COMMENT_DATE"));
+                comment.setComment_parent(rs.getInt("COMMENT_PARENT"));
+                comment.setComment_content(rs.getString("COMMENT_CONTENT"));
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+        close();
+        return comment; 
+    } 
+    // 댓글 수정
+    public boolean updateComment(CommentVO comment) 
+    {
+        boolean result = false;
+        
+        try{
+        	db 		 = new DBCon();
+            conn = db.getConnection();
+            System.out.println("댓글수정 db연결=====");
+            conn.setAutoCommit(false); // 자동 커밋을 false로 한다.
+            
+            StringBuffer sql = new StringBuffer();
+            sql.append("UPDATE BOARD_COMMENT SET");
+            sql.append(" COMMENT_CONTENT = ?");
+            sql.append(" WHERE COMMENT_NUM = ?");
+ 
+            pstmt = conn.prepareStatement(sql.toString());
+            pstmt.setString(1, comment.getComment_content());
+            pstmt.setInt(2, comment.getComment_num());
+ 
+            int flag = pstmt.executeUpdate();
+            if(flag > 0){
+                result = true;
+                conn.commit(); // 완료시 커밋
+            }
+            System.out.println("댓글수정커밋=============");
+        } catch (Exception e) {
+            try {
+                conn.rollback(); // 오류시 롤백
+            } catch (SQLException sqle) {
+                sqle.printStackTrace();
+            }
+            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
+        }
+    
+        close();
+        return result;
+    } // end updateComment    
     
     // DB 자원해제
     private void close()
@@ -176,5 +286,7 @@ public class CommentDAO {
             throw new RuntimeException(e.getMessage());
         }
     } // end close()    
+    
+    
 
 }

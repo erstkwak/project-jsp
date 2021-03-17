@@ -9,7 +9,6 @@ import java.util.ResourceBundle;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,13 +16,24 @@ import javax.servlet.http.HttpServletResponse;
 import mboard.board.action.Action;
 import mboard.board.action.ActionForward;
 
-@WebServlet("/CommentWriteAction.co")
+
 public class CommentController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
 	private HashMap<String,Action> commandMap;
     
+	/**
+     * 최초 실행 init
+     */
+    public void init(ServletConfig config) throws ServletException {    
+        loadProperties("mboard/board/comment/properties/CommentCommand");
+    }
+ 
+    /**
+     * 프로퍼티 파일에서 키값과 클래스 정보를 추출하여 그것을 Map에 저장한다.
+     * @param filePath 프로퍼티 파일의 경로
+     */
     private void loadProperties(String filePath) 
     {
     	System.out.println("!!!!!!!@#@@#@#@@#");
@@ -71,6 +81,7 @@ public class CommentController extends HttpServlet {
         // URI, command 확인
         System.out.println("requestURI : "+requestURI);
         System.out.println("Board cmd : "+command);
+        System.out.println("CommentController");
         
         ActionForward forward = null;
         Action action = null;

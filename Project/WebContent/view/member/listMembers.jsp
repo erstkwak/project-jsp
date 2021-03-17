@@ -41,10 +41,6 @@
 			</c:when>
 		</c:choose>
 	</table>
-<<<<<<< HEAD
 	<a href="${contextPath}/member/addMemberForm.do">회원 가입</a>
-=======
-	<a href="${contextPath}/member/adminInfo.do">관리자 페이지로</a>
->>>>>>> 75aa3e26e6b4df41006331032484b343abe009d7
 </body>
 </html>
