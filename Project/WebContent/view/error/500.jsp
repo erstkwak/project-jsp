@@ -7,7 +7,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>500 에러 발생</title>
+  <title>잠깐만요 !</title>
 </head>
 <body>
   서버에 문제가 있습니다.<br>

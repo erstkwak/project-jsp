@@ -17,8 +17,8 @@
 	<meta name="keywords"    content="운동, 헬스, 피트니스, 다이어트, 헬린이, 근육, 헬스장, 헬스장 위치 찾기, 헬스 팁, 헬스 커뮤니티">
 	<meta name="description" content="건강과 미용을 위해 헬스 또는 운동을 시작하는 헬린이들을 위한 팁을 제공하고 관련 정보를 공유하는 헬스 및 운동 관련 커뮤니티입니다.">
 	<meta name="robots"      content="all">
-	<meta name="author"      content="프로젝트 팀원 1, 2, 3, 4">
-	<meta name="date"        content="2021-02-28T09:00+09:00 // 프로젝트 완성 날짜로 추후 수정"> 
+	<meta name="author"      content="팀 프로젝트: 곽대희, 송현우, 이동준, 최성완 (가나다 순)">
+	<meta name="date"        content="2021-03-31T09:00+09:00"> 
   <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap">
