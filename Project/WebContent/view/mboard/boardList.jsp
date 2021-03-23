@@ -24,6 +24,10 @@
 					container {
 						color: black;
 					}
+					
+					 a {
+						color: black;
+					}
 
 					container ul {
 						list-style: none;
@@ -37,6 +41,9 @@
 						margin-left: 10px;
 						margin-right: 10px;
 					}
+					h3 {
+						text-align: center;
+					}
 				</style>
 
 <section id="contact" class="contact">
@@ -44,7 +51,7 @@
 		<div class="row justify-content-center" data-aos="fade-up">
 						
 						<div>
-							<table>
+							<table class="table">
 							
 							<h3>HEALTH_BOARD_LIST</h3>
 						<h3 class="hidden">게시판 검색폼</h3>
@@ -85,11 +92,11 @@
 								</tr>
 							</table>
 
+				<div style="text-align: center;">
 							<h3 class="hidden">현재 페이지</h3>
 							<div>
 								<span>${(empty param.p) ? 1 : param.p}</span> / ${lastNum} pages
 							</div>
-	
 	
 							<c:if test="${startNum>1}">
 								<a href="?p=${startNum-1}&t=&q=">이전</a>
@@ -99,10 +106,10 @@
 							</c:if>
 	
 	
-							<ul>
+							<ul >
 								<c:forEach var="i" begin="0" end="4">
 									<c:if test="${(startNum+i <= lastNum) }">
-										<li><a class="-text- ${(page==(startNum+i))?'orange':'' } bold"
+										<li ><a class="-text- ${(page==(startNum+i))?'orange':'' } bold"
 												href="?p=${startNum + i}&f=${param.f}&q=${param.q}">${startNum + i}</a></li>
 									</c:if>
 								</c:forEach>
@@ -115,6 +122,7 @@
 							<c:if test="${ startNum + 4 >= lastNum}">
 								<span onclick="alert('다음 페이지가 없습니다.');">다음</span>
 							</c:if>
+						</div>
 						</div>
 						</div>
 <form>

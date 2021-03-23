@@ -22,7 +22,7 @@
 	#contact a {color: black;}
 	.cls2 {font-size: 25px;}
 	#th1 {width: 15%;}
-	#th2 {width: 55%;}
+	#th2 {width: 55%; text-align: left;}
 	#th3 {width: 15%;}
 	#th4 {width: 15%;}
 </style>
@@ -75,7 +75,7 @@
 								</c:choose>
 								<tr>
 									<td>공지</td>
-									<td class="articleTitle"><a href="${contextPath}/notice/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a></td>
+									<td id="th2" class="articleTitle"><a href="${contextPath}/notice/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a></td>
 									<td>${writer}</td>
 									<td><fmt:formatDate value="${article.writeDate}" /></td>
 								</tr>
@@ -89,7 +89,7 @@
 								</c:choose>
 								<tr>
 									<td>${article.articleNO}</td>
-									<td class="articleTitle"><a	href="${contextPath}/notice/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a></td>
+									<td id="th2" class="articleTitle"><a href="${contextPath}/notice/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a></td>
 									<td>${writer}</td>
 									<td><fmt:formatDate value="${article.writeDate}" /></td>
 								</tr>

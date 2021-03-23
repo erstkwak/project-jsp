@@ -74,14 +74,14 @@
 			<!-- GNB // -->
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-        	<li><a href="${contextPath}/view/menu/menu2.jsp">프로젝트소개</a></li>
-          <li class="drop-down"><a href="${contextPath}/view/menu/menu3.jsp">운동</a>
+        	<li><a href="${contextPath}/view/menu/project.jsp">프로젝트 소개</a></li>
+          <li class="drop-down"><a href="${contextPath}/view/menu/ex.jsp">운동</a>
           	<ul>
-          		<li><a href="${contextPath}/view/menu/menu3_1.jsp">어깨 운동</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_2.jsp">가슴 운동</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_3.jsp">등 운동</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_4.jsp">이두·삼두 운동</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_5.jsp">하체 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_1.jsp">어깨 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_2.jsp">가슴 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_3.jsp">등 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_4.jsp">이두·삼두 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_5.jsp">하체 운동</a></li>
           	</ul>
           </li>
         	<li><a href="${contextPath}/map?cmd=VIEW&idx=1&sc=">주변 헬스장 찾기</a></li>

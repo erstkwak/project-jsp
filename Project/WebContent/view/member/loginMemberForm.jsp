@@ -39,7 +39,7 @@
 				    <input type="password" class="form-control" name="pwd" id="pwd" aria-describedby="pwdHelp">
 				    <small id="pwdHelp" class="form-text text-muted">비밀번호는 4 ~ 20 자로 이내로 입력하세요.</small>
 				  </div>
-				  <input type="submit" class="btn btn-secondary" value="로그인">
+				  <input type="submit" class="btn btn-dark" value="로그인">
 				</form>
 			</div>
 		</div>
