@@ -27,8 +27,8 @@
 <section>
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-8" style="border: 1px solid black; border-collapse: collapse; padding: 20px 0px 20px 20px;">
-				<table>
+			<div class="col-lg-8" >
+				<table class="table" style="text-align: center;">
 					<tr>
 						<td>아이디</td><td>비밀번호</td><td>이름</td><td>이메일</td><td>가입일</td><td>수정</td><td>삭제</td>
 					</tr>

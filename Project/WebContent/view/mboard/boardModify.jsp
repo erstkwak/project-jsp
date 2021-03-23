@@ -1,20 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+			<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" isELIgnored="false" %>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+		<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+			<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+				<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+			
+				<jsp:include page="/header.jsp"></jsp:include>
+				
+				<!-- 페이지 소개 // -->
+				<section id="breadcrumbs" class="breadcrumbs">
+					<div class="container">
+						<div class="d-flex justify-content-between align-items-center">
+							<h2>게시판</h2>
+							<ol>
+								<li><a href="${contextPath}/">홈</a></li>
+								<li><a href="${contextPath}/mboard/BoardListAction.do"><span style="color: white">게시판</a></span></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+				<!-- // 페이지 소개 -->
 
-</head>
-<body>
+<section id="contact" class="contact">
+	<div class="container">
+		<div class="row justify-content-center" data-aos="fade-up">
 	<div>
 	<h3>HEALTH_BOARD_MODIFY</h3>
 	<form action="BoardModifyAction.do" method="post">
-		<table>
+		<table class="table">
 			<tr><!-- BOARD TITLE -->
 				<td colspan="2" align="center"><h2>수정</h2></td>
 			</tr>
@@ -45,7 +58,7 @@
 				</tr>
 	
 			<tr>
-				<td><input type="submit" value="수정하기"/> </td>
+				<td colspan="2"><input type="submit" value="수정하기"/> </td>
 			</tr>
 			
 			<tr>
@@ -58,6 +71,11 @@
 		</table>
 	</form>
 	</div>
+		</div>
+	</div>
+	</div>
+	</section>
 	
-</body>
-</html>
+
+	
+					<jsp:include page="/footer.jsp"></jsp:include>

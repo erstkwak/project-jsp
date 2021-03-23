@@ -49,7 +49,7 @@
 				    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
 				    <small id="emailHelp" class="form-text text-muted">이메일을 올바르게 입력하세요.</small>
 				  </div>
-				  <input type="submit" class="btn btn-secondary" value="회원가입">
+				  <input type="submit" class="btn btn-dark" value="회원가입">
 				</form>
 			</div>
 		</div>

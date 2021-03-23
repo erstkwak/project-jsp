@@ -17,8 +17,8 @@
 	<meta name="keywords"    content="운동, 헬스, 피트니스, 다이어트, 헬린이, 근육, 헬스장, 헬스장 위치 찾기, 헬스 팁, 헬스 커뮤니티">
 	<meta name="description" content="건강과 미용을 위해 헬스 또는 운동을 시작하는 헬린이들을 위한 팁을 제공하고 관련 정보를 공유하는 헬스 및 운동 관련 커뮤니티입니다.">
 	<meta name="robots"      content="all">
-	<meta name="author"      content="프로젝트 팀원 1, 2, 3, 4">
-	<meta name="date"        content="2021-02-28T09:00+09:00 // 프로젝트 완성 날짜로 추후 수정"> 
+	<meta name="author"      content="팀 프로젝트: 곽대희, 송현우, 이동준, 최성완 (가나다 순)">
+	<meta name="date"        content="2021-03-31T09:00+09:00"> 
   <!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap">
@@ -74,14 +74,14 @@
 			<!-- GNB // -->
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-        	<li><a href="${contextPath}/view/menu/menu2.jsp">프로젝트소개</a></li>
-          <li class="drop-down"><a href="${contextPath}/view/menu/menu3.jsp">운동</a>
+        	<li><a href="${contextPath}/view/menu/project.jsp">프로젝트 소개</a></li>
+          <li class="drop-down"><a href="${contextPath}/view/menu/ex.jsp">운동</a>
           	<ul>
-          		<li><a href="${contextPath}/view/menu/menu3_1.jsp">어깨 운동</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_2.jsp">가슴 운동</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_3.jsp">등 운동</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_4.jsp">이두·삼두 운동</a></li>
-          		<li><a href="${contextPath}/view/menu/menu3_5.jsp">하체 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_1.jsp">어깨 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_2.jsp">가슴 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_3.jsp">등 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_4.jsp">이두·삼두 운동</a></li>
+          		<li><a href="${contextPath}/view/menu/ex_5.jsp">하체 운동</a></li>
           	</ul>
           </li>
         	<li><a href="${contextPath}/map?cmd=VIEW&idx=1&sc=">주변 헬스장 찾기</a></li>

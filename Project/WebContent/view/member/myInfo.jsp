@@ -52,7 +52,7 @@
 				    <label for="joindate">가입일</label>
 				    <input type="text" class="form-control" name="joindate" id="joindate" value="${memInfo.joindate}" disabled>
 				  </div>
-				  <input type="submit" class="btn btn-secondary" value="정보수정">
+				  <input type="submit" class="btn btn-dark" value="정보수정">
 				</form>
 			</div>
 		</div>

@@ -17,17 +17,17 @@
       <h2>어깨 운동</h2>
       <ol>
         <li><a href="${contextPath}/">홈</a></li>
-        <li><a href="${contextPath}/menu3.jsp">운동</a></li>
+        <li><a href="${contextPath}/ex.jsp">운동</a></li>
         <li>어깨 운동</li>
       </ol>
     </div>
   </div>
 </section>
 <!-- // 페이지 소개 -->
-	<br>
-	<br>
-	<br>
-	<br>
+
+<section id="contact" class="contact">
+	<div class="container">
+		<div id="cen" class="row justify-content-center" data-aos="fade-up">
 	<div>
 	<p style="text-align:center; font-size:100px;">추천 루틴</p>
 	<br>
@@ -158,5 +158,9 @@
 	 <br>
 	 <br>
 	</div>
+
+		</div>
+		</div>
+		</section>
 
 <jsp:include page="/footer.jsp"></jsp:include>
