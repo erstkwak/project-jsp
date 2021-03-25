@@ -93,15 +93,30 @@
 	<div style="text-align:center">
 	<img width = "500px" height = "400px" src="/images/menu_03_03.jpg"	/>
 	</div>
+	<p style="font-size:50px; display:inline-block">
+		세 번째
+	</p>	
 	<p style="font-size:30px; display:inline-block">
-		세 번째는 어깨 깡패가 되기 위해 꼭 필요한 운동이죠.
-		사이드 레터럴 레이즈 입니다.
+		는 어깨 깡패가 되기 위해 꼭 필요한 운동이죠.
+	</p>	
+	<p style="font-size:30px; display:inline-block; color:red">	 
+		사이드 레터럴 레이즈
+	</p>
+	<p style="font-size:30px; display:inline-block">
+	입니다.
+	</p><br>
+	<p style="font-size:30px; display:inline-block">
 		최대한 승모근 개입이 없이 측면 삼각근을 이용해야
-		하는 운동입니다. 일단 목, 승모 쪽에 힘을 풀어주시고
-		어깨에 힘을 걸고 고정해주세요.
+		하는 운동입니다.
+	</p><br>
+	<p style="font-size:30px; display:inline-block">
+		 일단 목, 승모 쪽에 힘을 풀어주시고	어깨에 힘을 걸고 고정해주세요.
+	</p>
+	<p style="font-size:30px; display:inline-block">
 		팔이 올라가면서 너무 뒤로 빠지지 않게 주의해야 하며
-		승모근이 올라갈 때  견갑골을 접어주신다고 생각 하시
-		면 됩니다.
+	</p><br>	 
+	<p style="font-size:30px; display:inline-block">
+		승모근이 올라갈 때 견갑골을 접어주신다고 생각 하시면 됩니다.
 	</p>
 	<br>
 	<br>
@@ -110,12 +125,26 @@
 	<div style="text-align:center">
 	<img width = "500px" height = "400px" src="/images/menu_03_04.jpg"	/>
 	</div>
+	<p style="font-size:50px; display:inline-block">
+		네 번째
+	</p>
 	<p style="font-size:30px; display:inline-block">
-		네 번째는 프론트 레이즈 입니다.
+	는
+	</p>
+	<p style="font-size:30px; display:inline-block; color:red">
+	프론트 레이즈
+	</p>
+	<p style="font-size:30px; display:inline-block">
+	 입니다.</p><br>
+	<p style="font-size:30px; display:inline-block">
 		전면 삼각근 운동이며 덤벨뿐만 아니라 바벨, 원판
 		케이블 등 다양한 도구를 사용할 수 있어요.
+	</p><br>	
+	<p style="font-size:30px; display:inline-block">
 		일단 다리는 어깨넓이보다 살짝 더 벌려주시고
-		팔은 쫙 피는 게 아니라 살짝 굽혀주신 상태로
+		팔은 쫙 피는 게 아니라</p><br> 
+	<p style="font-size:30px; display:inline-block">
+		살짝 굽혀주신 상태로
 		어깨 높이까지 올려주시면 됩니다.
 	</p>
 	<br>
@@ -125,13 +154,32 @@
 	<div style="text-align:center">
 	<img width = "500px" height = "400px" src="/images/menu_03_05.jpg"	/>
 	</div>
+	<p style="font-size:50px; display:inline-block">
+		다섯 번째
+	</p>
 	<p style="font-size:30px; display:inline-block">
-		다섯 번째는 벤트 오버 레터럴 레이즈 입니다.
-		후면 삼각근 운동이에요. 후면이 제대로운동이 돼야지
+	는
+	</p>
+	<p style="font-size:30px; display:inline-block; color:red">
+	 벤트 오버 레터럴 레이즈
+	 </p>
+	<p style="font-size:30px; display:inline-block">
+	  입니다.</p><br>
+	<p style="font-size:30px; display:inline-block">
+		후면 삼각근 운동이에요. 
+	</p><br>	
+	<p style="font-size:30px; display:inline-block">
+		후면이 제대로운동이 돼야지
 		비로소 어깨 깡패가 될 수 있다는!
+	</p><br>	
+	<p style="font-size:30px; display:inline-block">
 		절대 고중량으로 오버트레이닝을 하지 마시고요.
+	</p><br>	
+	<p style="font-size:30px; display:inline-block">
 		먼저 상체를 앞으로 숙여주시고 동작을 하면서 흔들림
 		없이 큰 자극을 주기 위해 하체를 잘 고정시켜줍니다.
+	</p><br>	
+	<p style="font-size:30px; display:inline-block">
 		덤벨은 어깨선을 넘지 않도록 주의해야 하며 사선이 아닌
 		직선으로 올바르게 들어 올려 주셔야 합니다.
 	</p>

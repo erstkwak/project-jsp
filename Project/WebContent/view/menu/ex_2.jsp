@@ -14,6 +14,9 @@
 <section id="breadcrumbs" class="breadcrumbs">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
+   	<p style="text-align:center; font-size:100px;">구현중입니다.</p>
+		<br>
+		<br>
       <h2>가슴 운동</h2>
       <ol>
         <li><a href="${contextPath}/">홈</a></li>

@@ -14,6 +14,9 @@
 <section id="breadcrumbs" class="breadcrumbs">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
+       	<p style="text-align:center; font-size:100px;">구현중입니다.</p>
+		<br>
+		<br>
       <h2>이두 운동</h2>
       <ol>
         <li><a href="${contextPath}/">홈</a></li>
@@ -35,8 +38,8 @@
 <br>
 <br>
 <div style="text-align: center">
-	<img width = "800px" height = "800px" src="/images/4-1.jpg"	/><br>
-	<img width = "800px" height = "800px" src="/images/4-2.jpg"	/><br>
+	<img width = "800px" height = "800px" src="/images/4_1.jpg"	/><br>
+	<img width = "800px" height = "800px" src="/images/4_2.jpg"	/><br>
 </div>
 <div style="text-align: center">
 	순서 : 

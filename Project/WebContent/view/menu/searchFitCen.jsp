@@ -53,7 +53,7 @@
 	<tr>
 	<div id="map" style="width:1000px;height:500px; margin:50px auto;"></div>
 	
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=adfaf46ada7c2e6a0d95101fe9bb8be1&libraries=services,clusterer,drawing"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6ef24e39c2ea5188548947caead0ecb0&libraries=services,clusterer,drawing"></script>
 <script>
 //////////////////지도 좌표////////////////////////////////////////////////////////////
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
