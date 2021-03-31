@@ -33,6 +33,9 @@
    						border-collapse: collapse;
 					}
 </style>
+<!-- 지도 API 사용 시 포트번호 8080에서 구동할 것 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8d0aeb6c0b8e1950f9aa9da542a882f3&libraries=services,clusterer,drawing"></script>
+
 <!-- 페이지 소개 // -->
 <section id="breadcrumbs" class="breadcrumbs">
   <div class="container">
@@ -53,7 +56,6 @@
 	<tr>
 	<div id="map" style="width:1000px;height:500px; margin:50px auto;"></div>
 	
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6ef24e39c2ea5188548947caead0ecb0&libraries=services,clusterer,drawing"></script>
 <script>
 //////////////////지도 좌표////////////////////////////////////////////////////////////
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div  

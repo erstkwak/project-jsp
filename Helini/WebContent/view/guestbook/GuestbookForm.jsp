@@ -67,6 +67,9 @@
 </script>
 <!-- // JS -->
 <br>
+<div class="container">
+	<div id="cen" class="row justify-content-center" data-aos="fade-up">
+
 	<div id="wrap">
 
 		<!-- 글 등록 부분 시작-->
@@ -119,6 +122,8 @@
 					</c:forEach>
 					<hr size="1" width="700">
 				</div>
+		</div>
+		</div>
 		</div>
 
 <jsp:include page="/footer.jsp"></jsp:include>
